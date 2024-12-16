@@ -1,0 +1,26 @@
+.navigation {
+	display: flex;
+	padding-top: 30px;
+	background-color: #333;
+}
+
+.logo {
+	img {
+		max-width: 150px;
+		aspect-ratio: 1;
+	}
+}
+
+.icon {
+	max-width: 25px;
+	aspect-ratio: 1;
+	color: var(--font-main-color);
+}
+
+.navbar {
+	display: flex;
+}
+
+.navlinks {
+	font-size: 20px;
+}

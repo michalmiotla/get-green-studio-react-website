@@ -3,3 +3,17 @@
 	margin: 0;
 	padding: 0;
 }
+
+html {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+a {
+	color: var(--font-main-color);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+li {
+	list-style: none;
+}
