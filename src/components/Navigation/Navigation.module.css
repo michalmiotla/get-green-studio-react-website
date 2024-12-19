@@ -20,6 +20,33 @@
 }
 
 .navbar {
+	display: none;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			padding-block: 2rem;
+
+			.navlinks {
+				font-size: 2rem;
+				padding: 0.5rem 1rem;
+			}
+		}
+
+		.icons {
+			.icon {
+				width: 2.5rem;
+				aspect-ratio: 1;
+				margin: 0 1rem;
+			}
+		}
+	}
+}
+
+.navbarMobile {
 	display: flex;
 	height: 100vh;
 	width: 100%;
@@ -55,6 +82,10 @@
 	}
 
 	.close {
+		display: none;
+	}
+
+	.navbarMobile {
 		display: none;
 	}
 
