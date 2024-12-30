@@ -1,16 +1,30 @@
 .navigation {
+	z-index: 100;
+	position: absolute;
 	display: flex;
 	justify-content: space-between;
 	position: absolute;
 	width: 100%;
-	padding-top: 4rem;
 }
 
 .logo {
+	z-index: 10;
+	padding-top: 40px;
+	padding-left: 2rem;
+
 	img {
 		max-width: 15rem;
 		aspect-ratio: 1;
 	}
+}
+
+.menu {
+	z-index: 10;
+	position: relative;
+	height: 100%;
+	padding-top: 20px;
+	padding-right: 2rem;
+	align-self: center;
 }
 
 .burger,
@@ -21,33 +35,14 @@
 
 .navbar {
 	display: none;
-
-	ul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		li {
-			padding-block: 2rem;
-
-			.navlinks {
-				font-size: 2rem;
-				padding: 0.5rem 1rem;
-			}
-		}
-
-		.icons {
-			.icon {
-				width: 2.5rem;
-				aspect-ratio: 1;
-				margin: 0 1rem;
-			}
-		}
-	}
 }
 
 .navbarMobile {
+	background-color: var(--background-main-color);
+	position: absolute;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100vh;
 	width: 100%;
 
@@ -58,8 +53,6 @@
 		flex-direction: column;
 
 		li {
-			padding-block: 2rem;
-
 			.navlinks {
 				font-size: 2rem;
 				padding: 0.5rem 1rem;
@@ -77,25 +70,40 @@
 }
 
 @media screen and (min-width: 768px) {
-	.burger {
-		display: none;
+	.logo {
+		padding-left: 0;
 	}
 
-	.close {
-		display: none;
-	}
-
+	.menu,
 	.navbarMobile {
 		display: none;
 	}
 
 	.navbar {
 		display: flex;
+		padding-top: 40px;
 		justify-content: end;
 		height: fit-content;
 
 		ul {
-			flex-direction: row;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				.navlinks {
+					font-size: 2rem;
+					padding: 0.5rem 1rem;
+				}
+			}
+
+			.icons {
+				.icon {
+					width: 2.5rem;
+					aspect-ratio: 1;
+					margin: 0 1rem;
+				}
+			}
 		}
 	}
 }

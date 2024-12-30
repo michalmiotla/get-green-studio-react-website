@@ -6,12 +6,8 @@ export function Navigation() {
 	const [isMobileNavShown, setIsMobileNavShown] = useState(false)
 	const [elementWidth, setElementWidth] = useState(window.innerWidth)
 
-	function showNavigation() {
-		setIsMobileNavShown(true)
-	}
-
-	function hideNavigation() {
-		setIsMobileNavShown(false)
+	function toggleNavigation() {
+		setIsMobileNavShown(!isMobileNavShown)
 	}
 
 	useEffect(() => {
@@ -19,7 +15,7 @@ export function Navigation() {
 			setElementWidth(window.innerWidth)
 		}
 
-		elementWidth > 768 && hideNavigation()
+		elementWidth > 768 && setIsMobileNavShown(false)
 
 		window.addEventListener('resize', handleResize)
 		return () => {
@@ -28,54 +24,70 @@ export function Navigation() {
 	}, [elementWidth])
 
 	return (
-		<Container>
-			<div className={styles.navigation}>
-				<div className={styles.logo}>
-					<a href='/'>
-						<img src='\src\assets\logo\logo.png' alt='get green studio logo' />
-					</a>
-				</div>
-				{isMobileNavShown === false ? (
-					<img onClick={() => showNavigation()} className={styles.burger} src='\src\assets\icons\burger.svg' alt='' />
-				) : (
-					<img onClick={() => hideNavigation()} className={styles.close} src='\src\assets\icons\close.svg' alt='' />
-				)}
+		<div>
+			<Container>
+				<div className={styles.navigation}>
+					<div className={styles.logo}>
+						<a href='/'>
+							<img src='\src\assets\logo\logo.png' alt='get green studio logo' />
+						</a>
+					</div>
+					{isMobileNavShown === false ? (
+						<div className={styles.menu}>
+							<img
+								onClick={() => toggleNavigation()}
+								className={styles.burger}
+								src='\src\assets\icons\burger.svg'
+								alt='open'
+							/>
+						</div>
+					) : (
+						<div className={styles.menu}>
+							<img
+								onClick={() => toggleNavigation()}
+								className={styles.close}
+								src='\src\assets\icons\close.svg'
+								alt='close'
+							/>
+						</div>
+					)}
 
-				<nav className={`${styles.navbar} ${isMobileNavShown && styles.navbarMobile}`}>
-					<ul>
-						<li>
-							<a className={styles.navlinks} href='/oferta'>
-								oferta
-							</a>
-						</li>
-						<li>
-							<a className={styles.navlinks} href='/pakiety'>
-								pakiety
-							</a>
-						</li>
-						<li>
-							<a className={styles.navlinks} href='/portfolio'>
-								portfolio
-							</a>
-						</li>
-						<li>
-							<a className={styles.navlinks} href='/contact'>
-								kontakt
-							</a>
-						</li>
-						<li>
-							<div className={styles.icons}>
-								<a href='https://facebook.com'>
-									<img className={styles.icon} src='/src/assets/icons/facebook.svg' alt='facebook' />
+					<nav className={`${styles.navbar} ${isMobileNavShown && styles.navbarMobile}`}>
+						<ul>
+							<li>
+								<a className={styles.navlinks} href='/oferta'>
+									oferta
 								</a>
-								<a href='https://instagram.com'>
-									<img className={styles.icon} src='/src/assets/icons/instagram.svg' alt='instagram' />
+							</li>
+							<li>
+								<a className={styles.navlinks} href='/pakiety'>
+									pakiety
 								</a>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</Container>
+							</li>
+							<li>
+								<a className={styles.navlinks} href='/portfolio'>
+									portfolio
+								</a>
+							</li>
+							<li>
+								<a className={styles.navlinks} href='/contact'>
+									kontakt
+								</a>
+							</li>
+							<li>
+								<div className={styles.icons}>
+									<a href='https://facebook.com'>
+										<img className={styles.icon} src='/src/assets/icons/facebook.svg' alt='facebook' />
+									</a>
+									<a href='https://instagram.com'>
+										<img className={styles.icon} src='/src/assets/icons/instagram.svg' alt='instagram' />
+									</a>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</Container>
+		</div>
 	)
 }
