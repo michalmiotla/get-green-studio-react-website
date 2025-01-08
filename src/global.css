@@ -21,5 +21,6 @@ li {
 }
 
 button {
+	font-family: 'Barlow Semi Condensed', sans-serif;
 	cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import { Button } from '../Button/Button'
 import styles from './Hero.module.css'
 import { Container } from '../Container/Container'
+import { Wave } from '../Wave/Wave'
 
 export function Hero() {
 	return (
@@ -19,6 +20,7 @@ export function Hero() {
 						<Button>Poznaj naszą ofertę</Button>
 					</div>
 				</Container>
+				<Wave />
 			</div>
 		</>
 	)
