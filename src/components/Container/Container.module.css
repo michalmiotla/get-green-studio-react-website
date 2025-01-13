@@ -1,6 +1,6 @@
 .container {
 	position: relative;
-	min-width: 350px;
-	max-width: 1250px;
+	min-width: 33.5rem;
+	max-width: 125rem;
 	margin: 0 auto;
 }

@@ -6,13 +6,13 @@ export function HowToCare() {
 		<Container>
 			<div className={styles.main}>
 				<p className={styles.title}>Dlaczego warto zadbać o ogród?</p>
-				<img className={styles.line} src='\src\assets\design\Line.jpg' alt='' />
+				<img className={styles.horizontal_line} src='\src\assets\design\Line.jpg' alt='' />
 				<div className={styles.boxes}>
 					<div className={styles.box_one}>
 						<div className={styles.img_box}>
 							<img src='\src\assets\design\People taking care of plants-bro.svg' alt='' />
 						</div>
-						{/* <img src='\src\assets\design\Line.jpg' alt='' /> */}
+						{/* <img className={styles.vertical_line} src='\src\assets\design\Line.jpg' alt='' /> */}
 						<div className={styles.text_boxes}>
 							<p>
 								Ogrody odgrywają ważną rolę w życiu człowieka, oferując przestrzeń do relaksu oraz kontaktu z naturą.
@@ -21,7 +21,7 @@ export function HowToCare() {
 							<p>Roślinność wpływa pozytywnie na samopoczucie, redukując stres i poprawiając zdrowie psychiczne.</p>
 						</div>
 					</div>
-					{/* <img src='\src\assets\design\Line.jpg' alt='' /> */}
+					<img className={styles.horizontal_line} src='\src\assets\design\Line.jpg' alt='' />
 					<div className={styles.box_two}>
 						<div className={styles.text_boxes}>
 							<p>
@@ -33,7 +33,7 @@ export function HowToCare() {
 								także wygodzie codziennego życia.
 							</p>
 						</div>
-						{/* <img src='\src\assets\design\Line.jpg' alt='' /> */}
+						{/* <img className={styles.vertical_line} src='\src\assets\design\Line.jpg' alt='' /> */}
 						<div className={styles.img_box}>
 							<img src='\src\assets\design\Spring flower-bro.svg' alt='' />
 						</div>
