@@ -1,0 +1,77 @@
+.gardenOfDreams {
+	background-color: var(--background-second-color);
+
+	.main {
+		position: relative;
+		padding-inline: 2rem;
+
+		.title {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			margin-bottom: 1rem;
+		}
+
+		.horizontal_line {
+			width: 100%;
+			margin: 1rem 0;
+		}
+
+		.vertical_line {
+			display: none;
+		}
+
+		.description {
+			text-align: center;
+			font-weight: 300;
+			font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+		}
+
+		.box {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--box-low-opacity);
+
+			.box_one,
+			.box_two {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: 2rem;
+
+				img {
+					height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
+					animation: move 30s infinite ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.gardenOfDreams {
+		.main {
+			.box {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+@keyframes move {
+	0% {
+		transform: scale(0.97);
+	}
+	50% {
+		transform: scale(1.03);
+	}
+	100% {
+		transform: scale(0.97);
+	}
+}

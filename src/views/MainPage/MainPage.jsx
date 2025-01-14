@@ -1,4 +1,5 @@
 import { Hero } from '../../components/Hero/Hero.jsx'
+import { GardenOfDreams } from '../../components/MainPageSections/GardenOfDreams.jsx'
 import { HowToCare } from '../../components/MainPageSections/HowToCare.jsx'
 
 export function MainPage() {
@@ -6,6 +7,7 @@ export function MainPage() {
 		<>
 			<Hero />
 			<HowToCare />
+			<GardenOfDreams />
 		</>
 	)
 }

@@ -24,7 +24,7 @@ export function Navigation() {
 	}, [elementWidth])
 
 	return (
-		<div>
+		<div className={styles.nav}>
 			<Container>
 				<div className={styles.navigation}>
 					<div className={styles.logo}>
