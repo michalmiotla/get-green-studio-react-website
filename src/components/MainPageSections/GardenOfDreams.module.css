@@ -1,4 +1,6 @@
 .gardenOfDreams {
+	padding-block: 10rem;
+	position: relative;
 	background-color: var(--background-second-color);
 
 	.main {
@@ -10,7 +12,7 @@
 			text-transform: uppercase;
 			font-weight: 300;
 			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
-			margin-bottom: 1rem;
+			margin-bottom: 3rem;
 		}
 
 		.horizontal_line {
@@ -26,6 +28,7 @@
 			text-align: center;
 			font-weight: 300;
 			font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+			margin-bottom: 3rem;
 		}
 
 		.box {
@@ -35,6 +38,8 @@
 			justify-content: center;
 			align-items: center;
 			background-color: var(--box-low-opacity);
+			border-radius: 2rem;
+			padding: 2rem;
 
 			.box_one,
 			.box_two {
@@ -43,11 +48,13 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				border-radius: 2rem;
+				width: 50%;
+				padding: 2rem;
+				gap: 2rem;
 
 				img {
 					height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
-					animation: move 30s infinite ease-in-out;
+					animation: move 20s infinite ease-in-out;
 				}
 			}
 		}
@@ -59,6 +66,24 @@
 		.main {
 			.box {
 				flex-direction: row;
+
+				.box_one,
+				.box_two {
+					img {
+						height: clamp(20rem, 41.494vw - 11.867rem, 40rem);
+					}
+				}
+
+				.horizontal_line {
+					display: none;
+				}
+			}
+
+			.vertical_line {
+				display: inline;
+				position: absolute;
+				width: clamp(25rem, 44.6985vw + -9.3732rem, 46.5rem);
+				rotate: 90deg;
 			}
 		}
 	}
