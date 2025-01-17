@@ -48,7 +48,6 @@ export function HowToCare() {
 					<hr className={styles.horizontal_line} />
 				</div>
 			</Container>
-			<Wave />
 		</div>
 	)
 }

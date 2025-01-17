@@ -82,8 +82,8 @@
 			.vertical_line {
 				display: inline;
 				position: absolute;
-				width: clamp(25rem, 44.6985vw + -9.3732rem, 46.5rem);
-				rotate: 90deg;
+				height: calc(100% - 2rem);
+				width: 1px;
 			}
 		}
 	}

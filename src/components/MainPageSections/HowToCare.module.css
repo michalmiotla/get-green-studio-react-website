@@ -80,8 +80,8 @@
 		.vertical_line {
 			display: inline;
 			position: absolute;
-			width: clamp(20rem, 41.494vw - 11.867rem, 40rem);
-			rotate: 90deg;
+			height: calc(100% - 2rem);
+			width: 1px;
 		}
 
 		.boxes {

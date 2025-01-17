@@ -49,6 +49,42 @@
 					animation: move 20s infinite ease-in-out;
 				}
 			}
+
+			.vertical_line {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.worthTrusting {
+		.main {
+			.box {
+				position: relative;
+				flex-direction: row;
+
+				.description_box {
+					width: 50%;
+					padding: 2rem;
+				}
+
+				.vertical_line {
+					display: inline;
+					position: absolute;
+					height: calc(100% - 2rem);
+					width: 1px;
+				}
+
+				.img_box {
+					width: 50%;
+
+					img {
+						height: clamp(35rem, 51.975vw - 4.969rem, 60rem);
+						animation: move 20s infinite ease-in-out;
+					}
+				}
+			}
 		}
 	}
 }
