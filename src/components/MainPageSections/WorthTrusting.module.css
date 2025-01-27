@@ -4,13 +4,14 @@
 
 	.main {
 		position: relative;
-		padding-inline: 2rem;
+		padding-bottom: 10rem;
 
 		.title {
 			text-align: center;
 			text-transform: uppercase;
 			font-weight: 300;
 			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			margin-bottom: 2rem;
 		}
 
 		.horizontal_line {
@@ -60,6 +61,8 @@
 @media screen and (min-width: 768px) {
 	.worthTrusting {
 		.main {
+			padding-bottom: 15rem;
+
 			.box {
 				position: relative;
 				flex-direction: row;

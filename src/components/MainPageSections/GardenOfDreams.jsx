@@ -1,6 +1,7 @@
 import styles from './GardenOfDreams.module.css'
 import { Container } from '../Container/Container'
 import { Button } from '../Button/Button'
+import { Wave } from '../Wave/Wave'
 
 export function GardenOfDreams() {
 	return (
@@ -28,6 +29,7 @@ export function GardenOfDreams() {
 					<hr className={styles.horizontal_line} />
 				</div>
 			</Container>
+			<Wave color='secondColor' />
 		</div>
 	)
 }

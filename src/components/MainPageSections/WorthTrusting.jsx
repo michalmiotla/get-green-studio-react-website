@@ -1,5 +1,6 @@
 import { Button } from '../Button/Button'
 import { Container } from '../Container/Container'
+import { Wave } from '../Wave/Wave'
 import styles from './WorthTrusting.module.css'
 
 export function WorthTrusting() {
@@ -31,6 +32,7 @@ export function WorthTrusting() {
 					<hr className={styles.horizontal_line} />
 				</div>
 			</Container>
+			<Wave color='mainColor' />
 		</div>
 	)
 }

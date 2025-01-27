@@ -1,9 +1,18 @@
 .wave {
 	position: absolute;
 	bottom: 0;
+	aspect-ratio: 1250/200;
 	width: 100%;
-	/* height: clamp(5rem, 1.433vw + 4.499rem, 10rem); */
-	background-image: url(../../assets/design/wave.svg);
+	min-height: 15rem;
+	max-height: 25rem;
 	background-size: cover;
-	background-position: top;
+	background-position: center;
+}
+
+.main {
+	background-image: url(../../assets/design/stacked-waves-haikei.svg);
+}
+
+.reversed {
+	background-image: url(../../assets/design/stacked-waves-haikei2.svg);
 }

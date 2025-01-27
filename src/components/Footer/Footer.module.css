@@ -1,3 +1,20 @@
 .footer {
-	display: none;
+	position: relative;
+	background-color: var(--footer-main-color);
+
+	.horizontal_line {
+		width: 100%;
+		margin: 1rem 0;
+	}
+
+	.main {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--box-low-opacity);
+		border-radius: 2rem;
+		padding: 2rem;
+	}
 }
