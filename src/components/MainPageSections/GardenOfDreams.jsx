@@ -17,13 +17,13 @@ export function GardenOfDreams() {
 					<div className={styles.box}>
 						<div className={styles.box_one}>
 							<img src='\src\assets\design\Seeding-bro.svg' alt='' />
-							<Button>Sprawdź dostępne pakiety</Button>
+							<Button to='/pakiety'>Sprawdź dostępne pakiety</Button>
 						</div>
 						<hr className={styles.horizontal_line} />
 						<hr className={styles.vertical_line} />
 						<div className={styles.box_two}>
 							<img src='\src\assets\design\upcycle-bro.svg' alt='' />
-							<Button>Zobacz nasze realizacje</Button>
+							<Button to='/portfolio'>Zobacz nasze realizacje</Button>
 						</div>
 					</div>
 					<hr className={styles.horizontal_line} />

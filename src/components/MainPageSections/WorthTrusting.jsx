@@ -22,7 +22,7 @@ export function WorthTrusting() {
 								innowacyjności, dbałość o szczegóły i detale, stały kontakt i doradztwo w dalszych etapach oraz{' '}
 								<strong>pozytywną energię!</strong>
 							</p>
-							<Button>Skontaktuj się z nami</Button>
+							<Button to='/kontakt'>Skontaktuj się z nami</Button>
 						</div>
 						<hr className={styles.vertical_line} />
 						<div className={styles.img_box}>

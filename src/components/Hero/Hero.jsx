@@ -16,7 +16,7 @@ export function Hero() {
 							przyrody łączy się z profesjonalizmem i indywidualnym podejściem do każdego projektu.
 						</h2>
 						<hr className={styles.lineTwo} />
-						<Button>Poznaj naszą ofertę</Button>
+						<Button to='/oferta'>Poznaj naszą ofertę</Button>
 					</div>
 				</Container>
 			</div>

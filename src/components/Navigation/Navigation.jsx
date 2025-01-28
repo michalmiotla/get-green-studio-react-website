@@ -70,7 +70,7 @@ export function Navigation() {
 								</a>
 							</li>
 							<li>
-								<a className={styles.navlinks} href='/contact'>
+								<a className={styles.navlinks} href='/kontakt'>
 									kontakt
 								</a>
 							</li>
