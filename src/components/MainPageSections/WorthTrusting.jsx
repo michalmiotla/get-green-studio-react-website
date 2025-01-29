@@ -2,6 +2,7 @@ import { Button } from '../Button/Button'
 import { Container } from '../Container/Container'
 import { Wave } from '../Wave/Wave'
 import styles from './WorthTrusting.module.css'
+import ImgFive from '../../assets/design/Friendship-bro.svg'
 
 export function WorthTrusting() {
 	return (
@@ -26,7 +27,7 @@ export function WorthTrusting() {
 						</div>
 						<hr className={styles.vertical_line} />
 						<div className={styles.img_box}>
-							<img src='\src\assets\design\Friendship-bro.svg' alt='' />
+							<img src={ImgFive} alt='' />
 						</div>
 					</div>
 					<hr className={styles.horizontal_line} />

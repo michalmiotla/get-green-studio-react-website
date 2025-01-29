@@ -1,6 +1,8 @@
 import { Container } from '../Container/Container'
 import { Wave } from '../Wave/Wave'
 import styles from './HowToCare.module.css'
+import ImgOne from '../../assets/design/People taking care of plants-bro.svg'
+import ImgTwo from '../../assets/design/Spring flower-bro.svg'
 
 export function HowToCare() {
 	return (
@@ -12,7 +14,7 @@ export function HowToCare() {
 					<div className={styles.boxes}>
 						<div className={styles.box_one}>
 							<div className={styles.img_box}>
-								<img src='\src\assets\design\People taking care of plants-bro.svg' alt='' />
+								<img src={ImgOne} alt='' />
 							</div>
 							<hr className={styles.vertical_line} />
 							<div className={styles.text_boxes}>
@@ -41,7 +43,7 @@ export function HowToCare() {
 							</div>
 							<hr className={styles.vertical_line} />
 							<div className={styles.img_box}>
-								<img src='\src\assets\design\Spring flower-bro.svg' alt='' />
+								<img src={ImgTwo} alt='' />
 							</div>
 						</div>
 					</div>

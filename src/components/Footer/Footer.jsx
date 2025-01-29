@@ -1,5 +1,7 @@
 import { Container } from '../Container/Container'
 import styles from './footer.module.css'
+import Leaf from '../../assets/design/leaf-svgrepo-com (1).svg'
+import Logo from '../../assets/logo/logo.png'
 
 export function Footer() {
 	return (
@@ -14,9 +16,9 @@ export function Footer() {
 						<p>mail@getgreenstudio.pl</p>
 					</div>
 					<div className={styles.img_box}>
-						<img className={styles.leaf_one} src='\src\assets\design\leaf-svgrepo-com (1).svg' alt='' />
-						<img className={styles.logo} src='\src\assets\logo\logo.png' alt='' />
-						<img className={styles.leaf_two} src='\src\assets\design\leaf-svgrepo-com (1).svg' alt='' />
+						<img className={styles.leaf_one} src={Leaf} alt='' />
+						<img className={styles.logo} src={Logo} alt='' />
+						<img className={styles.leaf_two} src={Leaf} alt='' />
 					</div>
 					<div className={styles.box_two}>
 						<p>NIP: 1234567890</p>

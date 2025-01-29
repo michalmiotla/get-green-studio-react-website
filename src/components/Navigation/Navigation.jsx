@@ -1,6 +1,12 @@
 import styles from './Navigation.module.css'
 import { Container } from '../Container/Container'
 import { useEffect, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import Logo from '../../../src/assets/logo/logo.png'
+import FBImg from '../../../src/assets/icons/facebook.svg'
+import IGImg from '../../../src/assets/icons/instagram.svg'
+import Burger from '../../assets/icons/burger.svg'
+import Close from '../../assets/icons/close.svg'
 
 export function Navigation() {
 	const [isMobileNavShown, setIsMobileNavShown] = useState(false)
@@ -28,60 +34,50 @@ export function Navigation() {
 			<Container>
 				<div className={styles.navigation}>
 					<div className={styles.logo}>
-						<a href='/'>
-							<img src='\src\assets\logo\logo.png' alt='get green studio logo' />
-						</a>
+						<Link to='/'>
+							<img src={Logo} alt='get green studio logo' />
+						</Link>
 					</div>
 					{isMobileNavShown === false ? (
 						<div className={styles.menu}>
-							<img
-								onClick={() => toggleNavigation()}
-								className={styles.burger}
-								src='\src\assets\icons\burger.svg'
-								alt='open'
-							/>
+							<img onClick={() => toggleNavigation()} className={styles.burger} src={Burger} alt='open' />
 						</div>
 					) : (
 						<div className={styles.menu}>
-							<img
-								onClick={() => toggleNavigation()}
-								className={styles.close}
-								src='\src\assets\icons\close.svg'
-								alt='close'
-							/>
+							<img onClick={() => toggleNavigation()} className={styles.close} src={Close} alt='close' />
 						</div>
 					)}
 
 					<nav className={`${styles.navbar} ${isMobileNavShown && styles.navbarMobile}`}>
 						<ul>
 							<li>
-								<a className={styles.navlinks} href='/oferta'>
+								<NavLink className={styles.navlinks} to='/oferta'>
 									oferta
-								</a>
+								</NavLink>
 							</li>
 							<li>
-								<a className={styles.navlinks} href='/pakiety'>
+								<NavLink className={styles.navlinks} to='/pakiety'>
 									pakiety
-								</a>
+								</NavLink>
 							</li>
 							<li>
-								<a className={styles.navlinks} href='/portfolio'>
+								<NavLink className={styles.navlinks} to='/portfolio'>
 									portfolio
-								</a>
+								</NavLink>
 							</li>
 							<li>
-								<a className={styles.navlinks} href='/kontakt'>
+								<NavLink className={styles.navlinks} to='/kontakt'>
 									kontakt
-								</a>
+								</NavLink>
 							</li>
 							<li>
 								<div className={styles.icons}>
-									<a href='https://facebook.com'>
-										<img className={styles.icon} src='/src/assets/icons/facebook.svg' alt='facebook' />
-									</a>
-									<a href='https://instagram.com'>
-										<img className={styles.icon} src='/src/assets/icons/instagram.svg' alt='instagram' />
-									</a>
+									<Link to='https://facebook.com'>
+										<img className={styles.icon} src={FBImg} alt='facebook' />
+									</Link>
+									<Link to='https://instagram.com'>
+										<img className={styles.icon} src={IGImg} alt='instagram' />
+									</Link>
 								</div>
 							</li>
 						</ul>
