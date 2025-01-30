@@ -6,7 +6,7 @@ import ImgTwo from '../../assets/design/Spring flower-bro.svg'
 
 export function HowToCare() {
 	return (
-		<div className={styles.howToCare}>
+		<div className={styles.how_to_care}>
 			<Container>
 				<div className={styles.main}>
 					<p className={styles.title}>Dlaczego warto zadbać o ogród?</p>

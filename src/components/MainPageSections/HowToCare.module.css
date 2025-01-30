@@ -1,103 +1,104 @@
-.howToCare {
+.how_to_care {
 	padding-block: 10rem;
 	position: relative;
-}
 
-.main {
-	position: relative;
-	padding-bottom: 10rem;
-	/* padding-inline: 2rem; */
-
-	.title {
-		text-align: center;
-		text-transform: uppercase;
-		font-weight: 300;
-		font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
-		margin-bottom: 1rem;
-	}
-	.horizontal_line {
-		width: 100%;
-		margin: 1rem 0;
-	}
-
-	.vertical_line {
-		display: none;
-	}
-
-	.boxes {
+	.main {
 		position: relative;
-		display: flex;
-		flex-direction: column;
+		padding-bottom: 10rem;
 
-		.box_one,
-		.box_two {
+		.title {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			margin-bottom: 1rem;
+		}
+		.horizontal_line {
+			width: 100%;
+			margin: 1rem 0;
+		}
+
+		.vertical_line {
+			display: none;
+		}
+
+		.boxes {
 			position: relative;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			border-radius: 2rem;
-			background-color: var(--box-low-opacity);
 
-			.img_box,
-			.text_boxes {
+			.box_one,
+			.box_two {
 				position: relative;
-				padding-block: 1rem;
-				width: 100%;
-				text-align: center;
-
-				img {
-					height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
-					animation: move 30s infinite ease-in-out;
-				}
-
-				p {
-					font-weight: 300;
-					font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
-				}
-			}
-
-			.text_boxes {
 				display: flex;
 				flex-direction: column;
-				justify-content: space-around;
-				height: 100%;
-				padding: 1rem;
-				gap: 2rem;
-			}
-		}
+				justify-content: center;
+				align-items: center;
+				border-radius: 2rem;
+				background-color: var(--box-low-opacity);
 
-		.box_two {
-			flex-direction: column-reverse;
+				.img_box,
+				.text_boxes {
+					position: relative;
+					padding-block: 1rem;
+					width: 100%;
+					text-align: center;
+
+					img {
+						height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
+						animation: move 30s infinite ease-in-out;
+					}
+
+					p {
+						font-weight: 300;
+						font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+					}
+				}
+
+				.text_boxes {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					height: 100%;
+					padding: 1rem;
+					gap: 2rem;
+				}
+			}
+
+			.box_two {
+				flex-direction: column-reverse;
+			}
 		}
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.main {
-		padding-bottom: 15rem;
+	.how_to_care {
+		.main {
+			padding-bottom: 15rem;
 
-		.title {
-			margin-bottom: 2rem;
-		}
-		.vertical_line {
-			display: inline;
-			position: absolute;
-			height: calc(100% - 2rem);
-			width: 1px;
-		}
+			.title {
+				margin-bottom: 2rem;
+			}
+			.vertical_line {
+				display: inline;
+				position: absolute;
+				height: calc(100% - 2rem);
+				width: 1px;
+			}
 
-		.boxes {
-			.box_one,
-			.box_two {
-				flex-direction: row;
+			.boxes {
+				.box_one,
+				.box_two {
+					flex-direction: row;
 
-				.img_box,
-				.text_boxes {
-					width: 50%;
+					.img_box,
+					.text_boxes {
+						width: 50%;
 
-					img {
-						height: clamp(20rem, 41.494vw - 11.867rem, 40rem);
+						img {
+							height: clamp(20rem, 41.494vw - 11.867rem, 40rem);
+						}
 					}
 				}
 			}
@@ -107,12 +108,12 @@
 
 @keyframes move {
 	0% {
-		transform: scale(0.97);
+		transform: scale(0.95);
 	}
 	50% {
-		transform: scale(1.03);
+		transform: scale(1.05);
 	}
 	100% {
-		transform: scale(0.97);
+		transform: scale(0.95);
 	}
 }

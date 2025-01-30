@@ -1,4 +1,4 @@
-.gardenOfDreams {
+.garden_of_dreams {
 	padding-block: 10rem;
 	position: relative;
 	background-color: var(--background-second-color);
@@ -62,7 +62,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.gardenOfDreams {
+	.garden_of_dreams {
 		.main {
 			padding-bottom: 15rem;
 

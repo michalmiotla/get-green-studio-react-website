@@ -7,7 +7,7 @@ import ImgFour from '../../assets/design/upcycle-bro.svg'
 
 export function GardenOfDreams() {
 	return (
-		<div className={styles.gardenOfDreams}>
+		<div className={styles.garden_of_dreams}>
 			<Container>
 				<div className={styles.main}>
 					<h3 className={styles.title}>Pomożemy Ci stworzyć swój ogród marzeń!</h3>

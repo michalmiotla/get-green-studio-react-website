@@ -1,4 +1,4 @@
-.worthTrusting {
+.worth_trusting {
 	position: relative;
 	padding-block: 10rem;
 
@@ -59,7 +59,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.worthTrusting {
+	.worth_trusting {
 		.main {
 			padding-bottom: 15rem;
 

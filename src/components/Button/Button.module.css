@@ -1,4 +1,9 @@
 .button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 	width: clamp(20rem, 19.444vw + 13.194rem, 37.5rem);
 	font-size: clamp(1.6rem, 1.333vw + 1.133rem, 2.8rem);
 	text-transform: uppercase;
@@ -14,4 +19,12 @@
 
 .button:hover {
 	background-color: var(--button-hover-color);
+}
+
+a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
 }

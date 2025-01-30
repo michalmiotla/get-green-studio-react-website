@@ -30,13 +30,13 @@ export function Navigation() {
 	}, [elementWidth])
 
 	return (
-		<div className={styles.nav}>
+		<nav className={styles.nav}>
 			<Container>
 				<div className={styles.navigation}>
 					<div className={styles.logo}>
-						<Link to='/'>
+						<NavLink to='/'>
 							<img src={Logo} alt='get green studio logo' />
-						</Link>
+						</NavLink>
 					</div>
 					{isMobileNavShown === false ? (
 						<div className={styles.menu}>
@@ -48,7 +48,7 @@ export function Navigation() {
 						</div>
 					)}
 
-					<nav className={`${styles.navbar} ${isMobileNavShown && styles.navbarMobile}`}>
+					<div className={`${isMobileNavShown ? styles.navbar_mobile_active : styles.navbar_mobile} ${styles.navbar}`}>
 						<ul>
 							<li>
 								<NavLink className={styles.navlinks} to='/oferta'>
@@ -81,9 +81,9 @@ export function Navigation() {
 								</div>
 							</li>
 						</ul>
-					</nav>
+					</div>
 				</div>
 			</Container>
-		</div>
+		</nav>
 	)
 }

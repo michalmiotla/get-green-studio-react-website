@@ -6,7 +6,7 @@ import ImgFive from '../../assets/design/Friendship-bro.svg'
 
 export function WorthTrusting() {
 	return (
-		<div className={styles.worthTrusting}>
+		<div className={styles.worth_trusting}>
 			<Container>
 				<div className={styles.main}>
 					<h3 className={styles.title}>Dlaczego warto nam zaufać?</h3>
