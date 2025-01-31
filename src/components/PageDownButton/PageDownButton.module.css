@@ -1,0 +1,33 @@
+.page_down_button {
+	position: absolute;
+	bottom: 0;
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	border: none;
+
+	animation: bounce 3s infinite ease-in-out;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+}
+
+.page_down_button:hover {
+	transform: scale(3);
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-50px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}

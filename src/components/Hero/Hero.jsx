@@ -1,8 +1,19 @@
 import { Button } from '../Button/Button'
 import styles from './Hero.module.css'
 import { Container } from '../Container/Container'
+import { PageDownButton } from '../PageDownButton/PageDownButton'
 
 export function Hero() {
+	function scrollDown() {
+		const windowHeight = window.innerHeight
+		const windowScrolled = window.scrollY
+
+		window.scrollTo({
+			top: windowScrolled + windowHeight,
+			behavior: 'smooth',
+		})
+	}
+
 	return (
 		<>
 			<div className={styles.hero}>
@@ -19,6 +30,7 @@ export function Hero() {
 						<Button to='/oferta'>Poznaj naszą ofertę</Button>
 					</div>
 				</Container>
+				<PageDownButton scrollDown={scrollDown} />
 			</div>
 		</>
 	)

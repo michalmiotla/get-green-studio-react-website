@@ -48,34 +48,37 @@ export function Navigation() {
 						</div>
 					)}
 
-					<div className={`${isMobileNavShown ? styles.navbar_mobile_active : styles.navbar_mobile} ${styles.navbar}`}>
+					<div
+						className={`${isMobileNavShown && elementWidth < 768 && styles.navbar_mobile_active} ${
+							!isMobileNavShown && elementWidth < 768 && styles.navbar_mobile
+						} ${!isMobileNavShown && elementWidth >= 768 && styles.navbar}`}>
 						<ul>
 							<li>
-								<NavLink className={styles.navlinks} to='/oferta'>
+								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/oferta'>
 									oferta
 								</NavLink>
 							</li>
 							<li>
-								<NavLink className={styles.navlinks} to='/pakiety'>
+								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/pakiety'>
 									pakiety
 								</NavLink>
 							</li>
 							<li>
-								<NavLink className={styles.navlinks} to='/portfolio'>
+								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/portfolio'>
 									portfolio
 								</NavLink>
 							</li>
 							<li>
-								<NavLink className={styles.navlinks} to='/kontakt'>
+								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/kontakt'>
 									kontakt
 								</NavLink>
 							</li>
 							<li>
 								<div className={styles.icons}>
-									<Link to='https://facebook.com'>
+									<Link onClick={() => setIsMobileNavShown(false)} to='https://facebook.com'>
 										<img className={styles.icon} src={FBImg} alt='facebook' />
 									</Link>
-									<Link to='https://instagram.com'>
+									<Link onClick={() => setIsMobileNavShown(false)} to='https://instagram.com'>
 										<img className={styles.icon} src={IGImg} alt='instagram' />
 									</Link>
 								</div>

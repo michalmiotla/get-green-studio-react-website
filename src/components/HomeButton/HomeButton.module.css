@@ -1,0 +1,28 @@
+.home_button {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	z-index: 30;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: none;
+	opacity: 30%;
+	transition: transform 0.3s;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1/1;
+	}
+}
+
+.home_button:hover {
+	transform: scale(1.1);
+}
+
+@media screen and (min-width: 1250px) {
+	.home_button {
+		width: 75px;
+		height: 75px;
+	}
+}

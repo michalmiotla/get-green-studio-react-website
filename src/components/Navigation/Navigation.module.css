@@ -60,6 +60,7 @@
 				}
 
 				.icons {
+					display: flex;
 					.icon {
 						width: clamp(2.8rem, 2.871vw + 1.795rem, 4rem);
 						aspect-ratio: 1;
