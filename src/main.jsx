@@ -6,6 +6,9 @@ import './global.css'
 import './theme.css'
 import { MainPage } from './views/MainPage/MainPage'
 import { Offer } from './views/Offer/Offer'
+import { Cards } from './views/Cards/Cards'
+import { Contact } from './views/Contact/Contact'
+import { Portfolio } from './views/Portfolio/Portfolio'
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
@@ -14,9 +17,9 @@ createRoot(document.getElementById('root')).render(
 				<Route path='' element={<Layout />}>
 					<Route path='/' element={<MainPage />}></Route>
 					<Route path='/oferta' element={<Offer />}></Route>
-					<Route path='/pakiety' element={<Offer />}></Route>
-					<Route path='/portfolio' element={<Offer />}></Route>
-					<Route path='/kontakt' element={<Offer />}></Route>
+					<Route path='/pakiety' element={<Cards />}></Route>
+					<Route path='/portfolio' element={<Portfolio />}></Route>
+					<Route path='/kontakt' element={<Contact />}></Route>
 				</Route>
 			</Routes>
 		</BrowserRouter>

@@ -47,7 +47,7 @@
 			.img_box {
 				img {
 					height: clamp(30rem, 71.77vw + 4.88rem, 60rem);
-					animation: move 20s infinite ease-in-out;
+					animation: move 5s infinite ease-in-out;
 				}
 			}
 
@@ -84,7 +84,6 @@
 
 					img {
 						height: clamp(35rem, 51.975vw - 4.969rem, 60rem);
-						animation: move 20s infinite ease-in-out;
 					}
 				}
 			}

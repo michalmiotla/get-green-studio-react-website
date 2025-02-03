@@ -46,7 +46,7 @@
 
 					img {
 						height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
-						animation: move 30s infinite ease-in-out;
+						animation: move 5s infinite ease-in-out;
 					}
 
 					p {

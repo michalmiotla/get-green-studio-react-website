@@ -34,7 +34,7 @@ export function Navigation() {
 			<Container>
 				<div className={styles.navigation}>
 					<div className={styles.logo}>
-						<NavLink to='/'>
+						<NavLink onClick={() => setIsMobileNavShown(false)} to='/'>
 							<img src={Logo} alt='get green studio logo' />
 						</NavLink>
 					</div>
