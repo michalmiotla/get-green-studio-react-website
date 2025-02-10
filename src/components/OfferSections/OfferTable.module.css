@@ -1,0 +1,36 @@
+.offer_table {
+	position: relative;
+	.main {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--box-low-opacity);
+		border-radius: 2rem;
+		padding: 2rem;
+
+		.title {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			margin-bottom: 1rem;
+		}
+
+		.horizontal_line {
+			width: 50%;
+			margin: 1rem 0;
+		}
+
+		table {
+			padding: 1rem;
+
+			tr,
+			th,
+			td {
+				padding: 1rem;
+			}
+		}
+	}
+}
