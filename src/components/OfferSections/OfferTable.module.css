@@ -1,5 +1,6 @@
 .offer_table {
 	position: relative;
+
 	.main {
 		position: relative;
 		display: flex;
@@ -23,13 +24,93 @@
 			margin: 1rem 0;
 		}
 
-		table {
+		.table {
+			position: relative;
 			padding: 1rem;
+			width: 100%;
+			border-collapse: collapse;
 
 			tr,
 			th,
 			td {
-				padding: 1rem;
+				padding: 0.5rem;
+
+				img {
+					width: 25%;
+					aspect-ratio: 1/1;
+				}
+			}
+
+			tr {
+				th {
+					width: 50%;
+					background-color: var(--table-main-color);
+					text-align: center;
+					text-transform: uppercase;
+					font-weight: 300;
+					font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+				}
+
+				td {
+					display: block;
+					text-align: center;
+				}
+
+				td::before {
+					content: attr(data-cell) ': ';
+				}
+
+				th,
+				td {
+					border: 1px solid white;
+				}
+			}
+
+			tr:first-child {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.offer_table {
+		.main {
+			.table {
+				tr,
+				th,
+				td {
+					padding: 0;
+				}
+
+				tr {
+					display: inline-block;
+					width: 100%;
+
+					th,
+					td {
+						height: 10rem;
+					}
+
+					th {
+						display: inline-block;
+						width: 20%;
+					}
+
+					td {
+						width: 20%;
+						display: inline-block;
+						text-align: center;
+					}
+
+					td::before {
+						content: '';
+					}
+				}
+
+				tr:first-child {
+					display: block;
+				}
 			}
 		}
 	}
