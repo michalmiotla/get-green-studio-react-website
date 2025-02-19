@@ -1,5 +1,6 @@
 .offer_table {
 	position: relative;
+	padding-bottom: 15rem;
 
 	.main {
 		position: relative;
@@ -9,7 +10,7 @@
 		align-items: center;
 		background-color: var(--box-low-opacity);
 		border-radius: 2rem;
-		padding: 2rem;
+		padding: 5rem 2rem;
 
 		.title {
 			text-align: center;
@@ -26,20 +27,9 @@
 
 		.table {
 			position: relative;
-			padding: 1rem;
+			margin-block: 3rem;
 			width: 100%;
 			border-collapse: collapse;
-
-			tr,
-			th,
-			td {
-				padding: 0.5rem;
-
-				img {
-					width: 25%;
-					aspect-ratio: 1/1;
-				}
-			}
 
 			tr {
 				th {
@@ -58,16 +48,43 @@
 
 				td::before {
 					content: attr(data-cell) ': ';
+					text-align: center;
+					text-transform: uppercase;
+					font-weight: 300;
+					font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
 				}
 
 				th,
 				td {
 					border: 1px solid white;
+					padding: 0.5rem;
+
+					img {
+						display: block;
+						width: 25%;
+						margin: auto;
+						aspect-ratio: 1/1;
+					}
 				}
 			}
 
 			tr:first-child {
 				display: none;
+			}
+		}
+
+		.additional_list {
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				text-align: center;
+				padding: 1rem;
+				font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
 			}
 		}
 	}
@@ -77,30 +94,30 @@
 	.offer_table {
 		.main {
 			.table {
-				tr,
-				th,
-				td {
-					padding: 0;
-				}
-
 				tr {
-					display: inline-block;
-					width: 100%;
-
+					th {
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+						}
+					}
 					th,
 					td {
-						height: 10rem;
-					}
-
-					th {
+						position: relative;
 						display: inline-block;
 						width: 20%;
-					}
-
-					td {
-						width: 20%;
-						display: inline-block;
 						text-align: center;
+						height: 10rem;
+						padding: 0;
+
+						img {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+						}
 					}
 
 					td::before {
@@ -113,5 +130,16 @@
 				}
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.offer_table {
+		padding-bottom: 25rem;
+	}
+}
+@media screen and (min-width: 1250px) {
+	.offer_table {
+		padding-bottom: 30rem;
 	}
 }

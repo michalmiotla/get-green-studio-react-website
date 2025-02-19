@@ -1,6 +1,8 @@
 import { Container } from '../Container/Container'
 import styles from './OfferTable.module.css'
 import OkSvg from '../../assets/icons/ok.svg'
+import XSvg from '../../assets/icons/close.svg'
+import { Wave } from '../Wave/Wave'
 
 export function OfferTable() {
 	return (
@@ -12,172 +14,202 @@ export function OfferTable() {
 					<table className={styles.table}>
 						<tr>
 							<th></th>
-							<th>Wizualizacje</th>
-							<th>Projekt koncepcyjny</th>
-							<th>Projekt wymiarowy</th>
-							<th>Dobór i obmiar materiałów</th>
+							<th>
+								<p>Wizualizacje</p>
+							</th>
+							<th>
+								<p>Projekt koncepcyjny</p>
+							</th>
+							<th>
+								<p>Projekt wymiarowy</p>
+							</th>
+							<th>
+								<p>Dobór i obmiar materiałów</p>
+							</th>
 						</tr>
 						<tr>
-							<th>Ogólny rzut ogrodu</th>
-							<td data-cell='visualizations'>
+							<th>
+								{' '}
+								<p>Ogólny rzut ogrodu</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
-								<img src={OkSvg} alt='ok' />
+							<td data-cell='Projekt wymiarowy'>
+								<img src={XSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-						</tr>
-						<tr>
-							<th>Nasadzenia</th>
-							<td data-cell='visualizations'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='concept'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='measurement'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='materials'>
-								<img src={OkSvg} alt='ok' />
+							<td data-cell='Dobór i obmiar materiałów'>
+								<img src={XSvg} alt='ok' />
 							</td>
 						</tr>
 						<tr>
-							<th>Ogrodzenia</th>
-							<td data-cell='visualizations'>
+							<th>
+								<p>Nasadzenia</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
+							<td data-cell='Projekt wymiarowy'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-						</tr>
-						<tr>
-							<th>Tarasy/balkony</th>
-							<td data-cell='visualizations'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='concept'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='measurement'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='materials'>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
 						</tr>
 						<tr>
-							<th>Nawierzchnie</th>
-							<td data-cell='visualizations'>
+							<th>
+								<p>Ogrodzenia</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
+							<td data-cell='Projekt wymiarowy'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-						</tr>
-						<tr>
-							<th>Oświetlenie</th>
-							<td data-cell='visualizations'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='concept'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='measurement'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='materials'>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
 						</tr>
 						<tr>
-							<th>Zielone ściany</th>
-							<td data-cell='visualizations'>
+							<th>
+								<p>Tarasy / balkony</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
+							<td data-cell='Projekt wymiarowy'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-						</tr>
-						<tr>
-							<th>Zbiorniki wodne</th>
-							<td data-cell='visualizations'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='concept'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='measurement'>
-								<img src={OkSvg} alt='ok' />
-							</td>
-							<td data-cell='materials'>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
 						</tr>
 						<tr>
-							<th>Elewacje budynków</th>
-							<td data-cell='visualizations'>
+							<th>
+								<p>Nawierzchnie</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
+							<td data-cell='Projekt wymiarowy'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
 						</tr>
 						<tr>
-							<th>Place zabaw</th>
-							<td data-cell='visualizations'>
+							<th>
+								<p>Oświetlenie</p>
+							</th>
+							<td data-cell='Wizualizacje'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='concept'>
+							<td data-cell='Projekt koncepcyjny'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='measurement'>
+							<td data-cell='Projekt wymiarowy'>
+								<img src={XSvg} alt='ok' />
+							</td>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
-							<td data-cell='materials'>
+						</tr>
+						<tr>
+							<th>
+								<p>Zielone ściany</p>
+							</th>
+							<td data-cell='Wizualizacje'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt koncepcyjny'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt wymiarowy'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Dobór i obmiar materiałów'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<p>Zbiorniki wodne</p>
+							</th>
+							<td data-cell='Wizualizacje'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt koncepcyjny'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt wymiarowy'>
+								<img src={XSvg} alt='ok' />
+							</td>
+							<td data-cell='Dobór i obmiar materiałów'>
+								<img src={XSvg} alt='ok' />
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<p>Elewacje budynków</p>
+							</th>
+							<td data-cell='Wizualizacje'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt koncepcyjny'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt wymiarowy'>
+								<img src={XSvg} alt='ok' />
+							</td>
+							<td data-cell='Dobór i obmiar materiałów'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<p>Place zabaw</p>
+							</th>
+							<td data-cell='Wizualizacje'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt koncepcyjny'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Projekt wymiarowy'>
+								<img src={OkSvg} alt='ok' />
+							</td>
+							<td data-cell='Dobór i obmiar materiałów'>
 								<img src={OkSvg} alt='ok' />
 							</td>
 						</tr>
 					</table>
 					<h3 className={styles.title}>Usługi dodatkowe</h3>
 					<hr className={styles.horizontal_line} />
-					<ul>
-						<li>Filmy ze “spaceru” po ogrodzie (do 30 sekund)</li>
-						<li>Modele 3D budynków, konstrukcji, produktów, terenu i małej architektury</li>
-						<li>Projekty elementów otoczenia (produktów, małej architektury, konstrukcji)</li>
-						<li>Wizualizacje produktów, konstrukcji, pomieszczeń, zagospodarowania terenów i zieleni</li>
+					<ul className={styles.additional_list}>
+						<li>- Filmy ze “spaceru” po ogrodzie (do 30 sekund)</li>
+						<li>- Modele 3D budynków, konstrukcji, produktów, terenu i małej architektury</li>
+						<li>- Projekty elementów otoczenia (produktów, małej architektury, konstrukcji)</li>
+						<li>- Wizualizacje produktów, konstrukcji, pomieszczeń, zagospodarowania terenów i zieleni</li>
 					</ul>
 				</div>
 			</Container>
+			<Wave color='mainColor' />
 		</div>
 	)
 }
