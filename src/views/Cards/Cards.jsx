@@ -1,11 +1,13 @@
 import { FixedBackground } from '../../components/FixedBackground/FixedBackground'
-import styles from './Cards.module.css'
 import CardsBackground from '../../assets/photos/WLS10.jpg'
+import { ServiceDescription } from '../../components/CardsSections/ServiceDescription'
+import { ServiceDetails } from '../../components/CardsSections/ServiceDetails'
 
 export function Cards() {
 	return (
-		<div className={styles.cards}>
-			Pakiety
+		<div>
+			<ServiceDescription />
+			<ServiceDetails />
 			<FixedBackground image={CardsBackground} />
 		</div>
 	)

@@ -16,7 +16,6 @@
 
 		.img_box {
 			position: relative;
-			padding-inline: 1rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
