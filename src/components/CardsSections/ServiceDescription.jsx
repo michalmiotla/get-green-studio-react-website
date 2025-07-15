@@ -22,29 +22,29 @@ export function ServiceDescription() {
 							<strong>Pakiet Mini</strong> to idealne rozwiązanie dla osób, które potrzebują szybkiej, profesjonalnej
 							porady lub wstępnej koncepcji zagospodarowania ogrodu. Obejmuje on konsultację z architektem krajobrazu,
 							analizę działki oraz uproszczony szkic koncepcyjny. Dzięki niemu klienci mogą w krótkim czasie uzyskać
-							klarowną wizję zmian, jakie warto wprowadzić w swojej przestrzeni zielonej. To ekonomiczna opcja dla tych,
-							którzy chcą rozpocząć przygodę z projektowaniem ogrodu bez dużych nakładów finansowych.
+							klarowną wizję zmian, jakie warto wprowadzić w swojej przestrzeni zielonej.
 						</p>
 					</div>
+					<hr className={styles.vertical_line_one} />
 					<div className={styles.img_box}>
 						<img src={Toggle} alt='' />
+						<p>
+							<strong>Szczegóły poniżej:</strong>
+						</p>
 					</div>
+					<hr className={styles.vertical_line_two} />
 					<div className={styles.box_two}>
 						<p>
 							<strong>Pakiet Standard</strong> to kompleksowy projekt koncepcyjny ogrodu, uwzględniający potrzeby
 							funkcjonalne i estetyczne właścicieli. Zawiera pełny plan zagospodarowania terenu, dobór roślin,
 							propozycje nawierzchni, małej architektury i oświetlenia ogrodu. Klient otrzymuje również zestawienie
-							materiałów oraz ogólne wytyczne wykonawcze. Ten pakiet to doskonały wybór dla osób, które oczekują
-							równowagi między jakością a ceną i chcą mieć dobrze przemyślaną przestrzeń wokół domu.
+							materiałów oraz ogólne wytyczne wykonawcze.
 						</p>
 						<p>
 							<strong>Pakiet Premium</strong> to najbardziej rozbudowana oferta, stworzona z myślą o wymagających
 							klientach szukających projektu „pod klucz”. Obejmuje wszystkie elementy pakietu Standard, a dodatkowo
 							szczegółowe projekty wykonawcze, wizualizacje 3D, harmonogram prac oraz nadzór autorski nad realizacją
-							ogrodu. W ramach tego pakietu możliwa jest również personalizacja elementów ogrodu oraz współpraca z
-							ekipami wykonawczymi rekomendowanymi przez Get Green Studio. To propozycja dla tych, którzy chcą mieć
-							pewność, że każdy szczegół ich ogrodu zostanie dopracowany i zrealizowany zgodnie z najwyższymi
-							standardami.
+							ogrodu.
 						</p>
 					</div>
 				</div>
