@@ -29,7 +29,7 @@ export function ServiceDescription() {
 					<div className={styles.img_box}>
 						<img src={Toggle} alt='' />
 						<p>
-							<strong>Szczegóły poniżej:</strong>
+							<strong>Poniżej więcej szczegółów:</strong>
 						</p>
 					</div>
 					<hr className={styles.vertical_line_two} />

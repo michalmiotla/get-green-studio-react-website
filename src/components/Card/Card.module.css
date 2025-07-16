@@ -1,0 +1,67 @@
+.card {
+	position: relative;
+	width: 80%;
+	max-width: 30rem;
+	height: 40rem;
+	margin: 2.5rem;
+	border: 2px solid white;
+	border-radius: 1rem;
+	background-image: url(../../assets/photos/hero-min.jpg);
+	transition: scale 0.5s;
+	overflow: hidden;
+
+	.card_gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		border-radius: 1rem;
+		background: rgb(30, 77, 16);
+		background: linear-gradient(180deg, rgba(30, 77, 16, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(30, 77, 16, 0.25) 100%);
+	}
+
+	.card_top,
+	.card_bottom {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 25%;
+		text-align: center;
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			padding: 0.5rem;
+		}
+
+		hr {
+			width: 30%;
+			height: 1px;
+		}
+	}
+
+	.card_bottom {
+		/* display: none; */
+		transform: translateY(400%);
+		transition: transform 0.5s;
+
+		p {
+			text-transform: uppercase;
+			font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+		}
+	}
+}
+
+.card:hover {
+	cursor: pointer;
+	scale: 1.05;
+}
+
+.card:hover .card_bottom {
+	display: flex;
+	transform: translateY(150%);
+}
