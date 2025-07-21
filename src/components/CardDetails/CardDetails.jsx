@@ -1,21 +1,19 @@
 import styles from './CardDetails.module.css'
+import { forwardRef } from 'react'
 
-export function CardDetails({ areDetailsShown, title }) {
+function CardDetails({ areDetailsShown, title }, ref) {
 	function HandleDetails() {
 		if (title === 'green mini') {
 			return (
 				<ul>
 					<li>
-						<p>Konsultacje + 1 poprawka projektu</p>
+						<p>Konsultacje + 1 poprawka koncepcji (kolejne dodatkowo płatne)</p>
 					</li>
 					<li>
-						<p>
-							Koncepcja w kolorze - 1 wersja (rzut z góry 2D z rozmieszczeniem i opisem stref ogrodu, oraz jego
-							wybranych elementów)
-						</p>
+						<p>Koncepcja 1 wersja (Układ funkcjonalny z opisami stref)</p>
 					</li>
 					<li>
-						<p>Uproszczona inwentaryzacja roślinności (możliwa w przypadku wizji lokalnej lub przy pomocy inwestora)</p>
+						<p>Uproszczona inwentaryzacja roślinności (Możliwa w przypadku wizji lokalnej lub przy pomocy inwestora)</p>
 					</li>
 					<li>
 						<p>
@@ -25,7 +23,7 @@ export function CardDetails({ areDetailsShown, title }) {
 						</p>
 					</li>
 					<li>
-						<p>Układ i propozycje rozmieszczenia elementów małej architektury</p>
+						<p>Układ i propozycje rozmieszczenia elementów małej architektury - wybranych przez klienta</p>
 					</li>
 				</ul>
 			)
@@ -33,36 +31,35 @@ export function CardDetails({ areDetailsShown, title }) {
 			return (
 				<ul>
 					<li>
-						<p>Konsultacje + 1 poprawka projektu</p>
+						<p>Konsultacje + 2 poprawki koncepcji (kolejne dodatkowo płatne)</p>
+					</li>
+					<li>
+						<p>Koncepcja 1 wersja (Układ funkcjonalny z opisami stref, rzut z góry z wymiarowaniem)</p>
 					</li>
 					<li>
 						<p>
-							Koncepcja w kolorze - 1 wersja (rzut z góry 2D z rozmieszczeniem i opisem stref ogrodu, oraz jego
-							wybranych elementów)
+							Szczegółowa inwentaryzacja istniejącej roślinności (Możliwa w przypadku wizji lokalnej lub przy pomocy
+							inwestora)
 						</p>
-					</li>
-					<li>
-						<p>Uproszczona inwentaryzacja roślinności (możliwa w przypadku wizji lokalnej lub przy pomocy inwestora)</p>
 					</li>
 					<li>
 						<p>
-							Postawowy plan nasadzeń (plan nasadzeń bez doboru gatunkowego roślin, tylko z podziałem na rodzaje roślin,
-							np. drzewa, krzewy) i wymiarowanie konkretnych rabat za pomocą kratki wymiarowej 1x1m - klient sam dobiera
-							rośliny w dane miejsce poza projektem
+							Projekt nasadzeń - (Plan nasadzeń, wymiarowanie rabat, dobór gatunkowy i obmiar potrzebnych roślin) - My
+							dobieramy rośliny klient sprawdza czy one pasują do jego wizji
 						</p>
 					</li>
 					<li>
-						<p>Układ i propozycje rozmieszczenia elementów małej architektury</p>
+						<p>Układ i propozycje rozmieszczenia elementów małej architektury - wybranych przez klienta</p>
 					</li>
 					<li>
 						<p>
-							Postawowy plan nasadzeń (plan nasadzeń bez doboru gatunkowego roślin, tylko z podziałem na rodzaje roślin,
-							np. drzewa, krzewy) i wymiarowanie konkretnych rabat za pomocą kratki wymiarowej 1x1m - klient sam dobiera
-							rośliny w dane miejsce poza projektem
+							<strong>PAKIET 4 WIZUALIZACJI (KLIENT WYBIERA MIEJSCE I KIERUNEK PATRZENIA NA WIZUALIZACJI)</strong>
 						</p>
 					</li>
 					<li>
-						<p>Układ i propozycje rozmieszczenia elementów małej architektury</p>
+						<p>
+							<strong>+1 PROJEKT DODATKOWY DO WYBORU</strong>
+						</p>
 					</li>
 				</ul>
 			)
@@ -70,48 +67,42 @@ export function CardDetails({ areDetailsShown, title }) {
 			return (
 				<ul>
 					<li>
-						<p>Konsultacje + 1 poprawka projektu</p>
+						<p>Konsultacje + 3 poprawki koncepcji (kolejne dodatkowo płatne)</p>
 					</li>
 					<li>
 						<p>
-							Koncepcja w kolorze - 1 wersja (rzut z góry 2D z rozmieszczeniem i opisem stref ogrodu, oraz jego
-							wybranych elementów)
+							Koncepcja 2 wersje (Układ funkcjonalny z opisami stref, rzut z góry z wymiarowaniem wybranej koncepcji)
 						</p>
-					</li>
-					<li>
-						<p>Uproszczona inwentaryzacja roślinności (możliwa w przypadku wizji lokalnej lub przy pomocy inwestora)</p>
 					</li>
 					<li>
 						<p>
-							Postawowy plan nasadzeń (plan nasadzeń bez doboru gatunkowego roślin, tylko z podziałem na rodzaje roślin,
-							np. drzewa, krzewy) i wymiarowanie konkretnych rabat za pomocą kratki wymiarowej 1x1m - klient sam dobiera
-							rośliny w dane miejsce poza projektem
+							Szczegółowa inwentaryzacja istniejącej roślinności (Możliwa w przypadku wizji lokalnej lub przy pomocy
+							inwestora)
 						</p>
-					</li>
-					<li>
-						<p>Układ i propozycje rozmieszczenia elementów małej architektury</p>
-					</li>
-					<li>
-						<p>Konsultacje + 1 poprawka projektu</p>
 					</li>
 					<li>
 						<p>
-							Koncepcja w kolorze - 1 wersja (rzut z góry 2D z rozmieszczeniem i opisem stref ogrodu, oraz jego
-							wybranych elementów)
+							Projekt nasadzeń - (Plan nasadzeń, wymiarowanie rabat, dobór gatunkowy i obmiar potrzebnych roślin) - My
+							dobieramy rośliny klient sprawdza czy one pasują do jego wizji
 						</p>
 					</li>
 					<li>
-						<p>Uproszczona inwentaryzacja roślinności (możliwa w przypadku wizji lokalnej lub przy pomocy inwestora)</p>
+						<p>Układ i propozycje rozmieszczenia elementów małej architektury - wybranych przez klienta</p>
+					</li>
+					<li>
+						<p>Rozmieszczenie i dobór punktów oświetlenia</p>
 					</li>
 					<li>
 						<p>
-							Postawowy plan nasadzeń (plan nasadzeń bez doboru gatunkowego roślin, tylko z podziałem na rodzaje roślin,
-							np. drzewa, krzewy) i wymiarowanie konkretnych rabat za pomocą kratki wymiarowej 1x1m - klient sam dobiera
-							rośliny w dane miejsce poza projektem
+							<strong>
+								PAKIET WIZUALIZACJI (ILOŚĆ WIZUALIZACJI DOBIERANA JEST DO WIELKOŚCI OGRODU) + SPACER PO OGRODZIE
+							</strong>
 						</p>
 					</li>
 					<li>
-						<p>Układ i propozycje rozmieszczenia elementów małej architektury</p>
+						<p>
+							<strong>+2 PROJEKTY DODATKOWE DO WYBORU</strong>
+						</p>
 					</li>
 				</ul>
 			)
@@ -120,7 +111,9 @@ export function CardDetails({ areDetailsShown, title }) {
 
 	return (
 		<>
-			<div className={`${styles.details} ${!areDetailsShown ? styles.details_hidden : styles.details_active}`}>
+			<div
+				ref={ref}
+				className={`${styles.details} ${!areDetailsShown ? styles.details_hidden : styles.details_active}`}>
 				<h3 className={styles.title}>{title}</h3>
 				<hr className={styles.horizontal_line} />
 				<div className={styles.description}>{HandleDetails()}</div>
@@ -128,3 +121,5 @@ export function CardDetails({ areDetailsShown, title }) {
 		</>
 	)
 }
+
+export default forwardRef(CardDetails)

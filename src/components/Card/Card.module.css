@@ -6,7 +6,10 @@
 	margin: 2.5rem;
 	border: 2px solid white;
 	border-radius: 1rem;
-	background-image: url(../../assets/photos/hero-min.jpg);
+	/* background-image: url(../../assets/photos/hero-min.jpg); */
+	background-position: center;
+	background-size: cover;
+
 	transition: scale 0.5s;
 	overflow: hidden;
 
