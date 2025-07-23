@@ -54,22 +54,34 @@ export function Navigation() {
 						} ${!isMobileNavShown && elementWidth >= 768 && styles.navbar}`}>
 						<ul>
 							<li>
-								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/oferta'>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/oferta'>
 									oferta
 								</NavLink>
 							</li>
 							<li>
-								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/pakiety'>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/pakiety'>
 									pakiety
 								</NavLink>
 							</li>
 							<li>
-								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/portfolio'>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/portfolio'>
 									portfolio
 								</NavLink>
 							</li>
 							<li>
-								<NavLink onClick={() => setIsMobileNavShown(false)} className={styles.navlinks} to='/kontakt'>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/kontakt'>
 									kontakt
 								</NavLink>
 							</li>

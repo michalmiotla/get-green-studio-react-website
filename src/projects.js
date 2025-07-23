@@ -1,0 +1,58 @@
+export const projects = [
+	{
+		id: 1,
+		name: 'Basen dla łódek',
+		category: 'konstrukcje',
+		year: 2023,
+		location: 'Lublin',
+		photos: [
+			'/src/assets/projects/basen dla łódek/WB1_2 - Photo.jpg',
+			'/src/assets/projects/basen dla łódek/WB1_3 - Photo.jpg',
+			'/src/assets/projects/basen dla łódek/WB1_4 - Photo.jpg',
+			'/src/assets/projects/basen dla łódek/WB1_5 - Photo.jpg',
+			'/src/assets/projects/basen dla łódek/WB1_7 - Photo.jpg',
+		],
+	},
+	{
+		id: 2,
+		name: 'brama parku',
+		category: 'konstrukcje',
+		year: 2024,
+		location: 'Lublin',
+		photos: [
+			'/src/assets/projects/brama parku/WBR1_1 - Photo.jpg',
+			'/src/assets/projects/brama parku/WBR1_2 - Photo.jpg',
+			'/src/assets/projects/brama parku/WBR1_3 - Photo.jpg',
+			'/src/assets/projects/brama parku/WBR1_5 - Photo.jpg',
+			'/src/assets/projects/brama parku/WBR1_6 - Photo.jpg',
+		],
+	},
+	{
+		id: 3,
+		name: 'ogród rozalin',
+		category: 'ogrody',
+		year: 2023,
+		location: 'Rozalin',
+		photos: [
+			'/src/assets/projects/ogród rozalin/WPR1.jpg',
+			'/src/assets/projects/ogród rozalin/WPR4.jpg',
+			'/src/assets/projects/ogród rozalin/WPR10.jpg',
+			'/src/assets/projects/ogród rozalin/WPR17.jpg',
+			'/src/assets/projects/ogród rozalin/WPR20.jpg',
+		],
+	},
+	{
+		id: 4,
+		name: 'ogród zakątek',
+		category: 'ogrody',
+		year: 2024,
+		location: 'Zakątek',
+		photos: [
+			'/src/assets/projects/ogród zakątek/WLZ1_3 - Photo.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_4 - Photo.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_6 - Photo.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_14 - Photo.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_20 - Photo.jpg',
+		],
+	},
+]
