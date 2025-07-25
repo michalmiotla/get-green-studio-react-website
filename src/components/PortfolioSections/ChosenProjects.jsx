@@ -5,13 +5,20 @@ import { Project } from '../Project/Project'
 import styles from './ChosenProjects.module.css'
 
 export function ChosenProjects() {
-	const [selectedOption, setSelectedOption] = useState('ogrody')
+	const [selectedOption, setSelectedOption] = useState('wszystko')
 	const [projectsArray, setProjectsArray] = useState(projects)
 
 	function FilterProjects() {
-		// setProjectsArray(prevArray => [prevArray.filter(proj => proj.category === selectedOption)])
-		// console.log(projectsArray)
-		return projectsArray.map(project => (
+		let array
+
+		if (selectedOption === 'ogrody') {
+			array = projectsArray.filter(proj => proj.category === 'ogrody')
+		} else if (selectedOption === 'konstrukcje') {
+			array = projectsArray.filter(proj => proj.category === 'konstrukcje')
+		} else if (selectedOption === 'wszystko') {
+			array = projectsArray
+		}
+		return array.map(project => (
 			<Project
 				key={project.id}
 				img={project.photos[0]}
@@ -22,8 +29,6 @@ export function ChosenProjects() {
 		))
 	}
 
-	console.log(projectsArray)
-
 	return (
 		<div className={styles.chosen_projects}>
 			<Container>
@@ -32,10 +37,10 @@ export function ChosenProjects() {
 					<hr className={styles.horizontal_line} />
 					<div className={styles.filter}>
 						<p>filtruj:</p>
-						<select>
-							<option onSelect={() => setSelectedOption('wszystko')}>wszystko</option>
-							<option onSelect={() => setSelectedOption('ogrody')}>ogrody</option>
-							<option onSelect={() => setSelectedOption('konstrukcje')}>konstrukcje</option>
+						<select value={selectedOption} onChange={e => setSelectedOption(e.target.value)}>
+							<option value={'wszystko'}>wszystko</option>
+							<option value={'ogrody'}>ogrody</option>
+							<option value={'konstrukcje'}>konstrukcje</option>
 						</select>
 					</div>
 					<hr className={styles.horizontal_line} />
