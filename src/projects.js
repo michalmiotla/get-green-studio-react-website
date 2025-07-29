@@ -51,8 +51,8 @@ export const projects = [
 			'/src/assets/projects/ogród zakątek/WLZ1_3 - Photo.jpg',
 			'/src/assets/projects/ogród zakątek/WLZ1_4 - Photo.jpg',
 			'/src/assets/projects/ogród zakątek/WLZ1_6 - Photo.jpg',
-			'/src/assets/projects/ogród zakątek/WLZ1_14 - Photo.jpg',
-			'/src/assets/projects/ogród zakątek/WLZ1_20 - Photo.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_14 - Zdjęcie.jpg',
+			'/src/assets/projects/ogród zakątek/WLZ1_20 - Zdjęcie.jpg',
 		],
 	},
 ]

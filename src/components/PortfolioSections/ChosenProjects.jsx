@@ -6,7 +6,7 @@ import styles from './ChosenProjects.module.css'
 
 export function ChosenProjects() {
 	const [selectedOption, setSelectedOption] = useState('wszystko')
-	const [projectsArray, setProjectsArray] = useState(projects)
+	const projectsArray = projects
 
 	function FilterProjects() {
 		let array
@@ -22,6 +22,7 @@ export function ChosenProjects() {
 			<Project
 				key={project.id}
 				img={project.photos[0]}
+				gallery={project.photos}
 				name={project.name}
 				location={project.location}
 				year={project.year}

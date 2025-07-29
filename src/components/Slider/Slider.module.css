@@ -1,0 +1,68 @@
+.slider {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(0, 0, 0, 0.6);
+
+	.main {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		.up {
+			position: absolute;
+			cursor: pointer;
+			width: 150px;
+			height: 150px;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%) rotate(180deg);
+		}
+
+		.down {
+			position: absolute;
+			cursor: pointer;
+			width: 150px;
+			height: 150px;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+		}
+
+		.images_box {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			max-width: 1280px;
+			max-height: 720px;
+			border-radius: 2rem;
+			border: 2px solid white;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.close {
+				position: absolute;
+				cursor: pointer;
+				width: 75px;
+				height: 75px;
+				top: 0;
+				right: 0;
+				background-color: rgb(0, 0, 0, 0.6);
+				transition: background-color 0.3s;
+			}
+
+			.close:hover {
+				background-color: rgb(0, 0, 0, 0.9);
+			}
+		}
+	}
+}
