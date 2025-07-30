@@ -18,7 +18,9 @@ export function Project({ img, gallery, name, location, year }) {
 				</div>
 				<hr className={styles.horizontal_line} />
 			</div>
-			{isSliderShown && <Slider setIsSliderShown={setIsSliderShown} gallery={gallery} />}
+			{isSliderShown && (
+				<Slider setIsSliderShown={setIsSliderShown} gallery={gallery} name={name} location={location} year={year} />
+			)}
 		</>
 	)
 }

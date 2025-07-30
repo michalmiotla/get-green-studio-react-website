@@ -1,0 +1,55 @@
+.form {
+	padding-top: 15rem;
+
+	.title_box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h3 {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			padding-block: 1rem;
+		}
+
+		.horizontal_line_one {
+			width: 100%;
+			margin: 1rem 0;
+		}
+
+		p {
+			text-align: center;
+			font-weight: 300;
+			font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+		}
+	}
+
+	.main {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.horizontal_line_two {
+			width: 100%;
+			margin: 1rem 0;
+		}
+
+		.vertical_line {
+			display: none;
+			position: absolute;
+			height: calc(100% - 2rem);
+			width: 1px;
+		}
+
+		.form_box {
+		
+        }
+	}
+}

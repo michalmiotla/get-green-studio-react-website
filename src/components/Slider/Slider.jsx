@@ -3,7 +3,7 @@ import CLOSE from '../../assets/icons/close.svg'
 
 import DOWN from '../../assets/icons/down.svg'
 import { useState } from 'react'
-export function Slider({ gallery, setIsSliderShown }) {
+export function Slider({ gallery, setIsSliderShown, name, location, year }) {
 	const [slide, setSlide] = useState(0)
 
 	const nextSlide = () => {
@@ -22,6 +22,14 @@ export function Slider({ gallery, setIsSliderShown }) {
 				<div className={styles.images_box}>
 					<img className={styles.image} src={gallery[slide]} alt='' />
 					<img onClick={() => setIsSliderShown(false)} className={styles.close} src={CLOSE} alt='' />
+					<div className={styles.image_description}>
+						<p>
+							{slide + 1}/{gallery.length}
+						</p>
+						<p>
+							{name}, {location}, {year}
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
