@@ -31,25 +31,154 @@
 	.main {
 		position: relative;
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 
-		.horizontal_line_two {
+		form {
+			position: relative;
+
+			.bigger_label {
+				text-transform: uppercase;
+				font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+			}
+
+			.smaller_label {
+				text-transform: uppercase;
+				font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+			}
+
+			.error {
+				position: absolute;
+				bottom: -6%;
+				font-size: clamp(1.2rem, 0.667vw + 0.967rem, 1.8rem);
+				text-transform: uppercase;
+				color: rgb(121, 22, 22);
+				visibility: hidden;
+			}
+
+			.basic_info {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.image {
+					position: relative;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					img {
+						height: 100%;
+						width: 100%;
+						max-width: 50rem;
+					}
+				}
+
+				.basic_box {
+					position: relative;
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+
+					.basic_input {
+						width: 100%;
+						max-width: 35rem;
+						text-transform: uppercase;
+						font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+						padding: 0.5rem 1rem;
+						margin: 0.5rem;
+						font-family: 'Barlow Semi Condensed', sans-serif;
+					}
+
+					.basic_info_box {
+						position: relative;
+						width: 80%;
+						max-width: 30rem;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						padding: 1rem;
+						text-align: center;
+					}
+				}
+
+				.horizontal_line_two {
+					width: 100%;
+					margin: 1rem 0;
+				}
+
+				.vertical_line {
+					display: none;
+					position: absolute;
+					height: calc(100% - 2rem);
+					width: 1px;
+				}
+			}
+		}
+
+		.second_info {
+			position: relative;
 			width: 100%;
-			margin: 1rem 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.second_info_box {
+				position: relative;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 
-		.vertical_line {
-			display: none;
-			position: absolute;
-			height: calc(100% - 2rem);
-			width: 1px;
+		.additional_info {
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
+	}
+}
 
-		.form_box {
-		
-        }
+@media screen and (min-width: 768px) {
+	.form {
+		.main {
+			form {
+				.basic_info {
+					flex-direction: row;
+
+					.horizontal_line_two {
+						display: none;
+					}
+
+					.vertical_line {
+						display: block;
+					}
+
+					.basic_box {
+						flex-direction: column;
+						flex-wrap: nowrap;
+
+						.basic_input {
+							max-width: none;
+						}
+
+						.basic_info_box {
+							max-width: 60rem;
+						}
+					}
+				}
+			}
+		}
 	}
 }
