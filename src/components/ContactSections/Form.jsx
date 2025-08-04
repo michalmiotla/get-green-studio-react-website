@@ -57,43 +57,57 @@ export function Form() {
 						</div>
 						<div className={styles.second_info}>
 							<div className={styles.second_info_box}>
-								<p className={styles.bigger_label}>Preferowany pakiet:</p>
-								<input type='radio' name='mini' />
-								<label className={styles.smaller_label} htmlFor='mini'>
-									Green Mini
-								</label>
-								<input type='radio' name='standard' />
-								<label className={styles.smaller_label} htmlFor='standard'>
-									Green Standard
-								</label>
-								<input type='radio' name='premium' />
-								<label className={styles.smaller_label} htmlFor='premium'>
-									Green Premium
-								</label>
+								<p className={styles.bigger_label}>Preferowany pakiet "Green":</p>
+								<div>
+									<input type='radio' id='mini' />
+									<label className={styles.smaller_label} htmlFor='mini'>
+										Mini
+									</label>
+								</div>
+								<div>
+									<input type='radio' id='standard' />
+									<label className={styles.smaller_label} htmlFor='standard'>
+										Standard
+									</label>
+								</div>
+								<div>
+									<input type='radio' id='premium' />
+									<label className={styles.smaller_label} htmlFor='premium'>
+										Premium
+									</label>
+								</div>
 							</div>
 							<div className={styles.second_info_box}>
 								<p className={styles.bigger_label}>Ukształtowanie terenu:</p>
-								<input type='radio' name='flat' />
-								<label className={styles.smaller_label} htmlFor='mini'>
-									Płaski
-								</label>
-								<input type='radio' name='wrinkled' />
-								<label className={styles.smaller_label} htmlFor='standard'>
-									Pofałdowany
-								</label>
-								<input type='radio' name='steep' />
-								<label className={styles.smaller_label} htmlFor='premium'>
-									Stromy
-								</label>
+								<div>
+									<input type='radio' id='flat' />
+									<label className={styles.smaller_label} htmlFor='flat'>
+										Płaski
+									</label>
+								</div>
+								<div>
+									<input type='radio' id='wrinkled' />
+									<label className={styles.smaller_label} htmlFor='wrinkled'>
+										Falisty
+									</label>
+								</div>
+								<div>
+									<input type='radio' id='steep' />
+									<label className={styles.smaller_label} htmlFor='steep'>
+										Stromy
+									</label>
+								</div>
 							</div>
 						</div>
 						<div className={styles.additional_info}>
-							<p>Dodatkowe informacje:</p>
-							<input type='text' />
-							<input type='radio' name='accept' />
-							<label className={styles.smaller_label} htmlFor='mini'>
-								Akceptuję politykę prywatności*
-							</label>
+							<p className={styles.bigger_label}>Dodatkowe informacje:</p>
+							<textarea name='' id=''></textarea>
+							<div>
+								<input type='radio' id='accept' />
+								<label className={styles.smaller_label} htmlFor='accept'>
+									Akceptuję politykę prywatności*
+								</label>
+							</div>
 						</div>
 						<button>Wyślij</button>
 					</form>
