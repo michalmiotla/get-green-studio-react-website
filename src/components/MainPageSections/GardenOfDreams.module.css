@@ -1,11 +1,11 @@
 .garden_of_dreams {
-	padding-block: 10rem;
+	padding-block: 5rem;
 	position: relative;
 	background-color: var(--background-second-color);
 
 	.main {
 		position: relative;
-		padding-bottom: 10rem;
+		padding-bottom: 5rem;
 
 		.title {
 			text-align: center;
@@ -64,8 +64,6 @@
 @media screen and (min-width: 768px) {
 	.garden_of_dreams {
 		.main {
-			padding-bottom: 15rem;
-
 			.box {
 				flex-direction: row;
 

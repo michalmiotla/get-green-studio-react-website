@@ -1,7 +1,6 @@
 import styles from './GardenOfDreams.module.css'
 import { Container } from '../Container/Container'
 import { Button } from '../Button/Button'
-import { Wave } from '../Wave/Wave'
 import ImgThree from '../../assets/design/Seeding-bro.svg'
 import ImgFour from '../../assets/design/upcycle-bro.svg'
 
@@ -31,7 +30,6 @@ export function GardenOfDreams() {
 					<hr className={styles.horizontal_line} />
 				</div>
 			</Container>
-			<Wave color='secondColor' />
 		</div>
 	)
 }

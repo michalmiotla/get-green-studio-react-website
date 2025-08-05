@@ -1,6 +1,6 @@
 .offer_table {
 	position: relative;
-	padding-bottom: 15rem;
+	padding-bottom: 10rem;
 
 	.main {
 		position: relative;
@@ -130,16 +130,5 @@
 				}
 			}
 		}
-	}
-}
-
-@media screen and (min-width: 1000px) {
-	.offer_table {
-		padding-bottom: 25rem;
-	}
-}
-@media screen and (min-width: 1250px) {
-	.offer_table {
-		padding-bottom: 30rem;
 	}
 }

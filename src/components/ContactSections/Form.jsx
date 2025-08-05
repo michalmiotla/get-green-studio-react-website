@@ -10,9 +10,9 @@ export function Form() {
 					<h3>kontakt</h3>
 					<hr className={styles.horizontal_line_one} />
 					<p>
-						Możesz się skontaktować z nami telefonicznie, mailowo, lub wypełniając poniższy formularz. Gdy otrzymamy
-						informację o wypełnionym i wysłanym formularzu, przygotujemy dla Ciebie odpowiednią ofertę wraz ze wstępną
-						wyceną.
+						Możesz się skontaktować z nami <strong>telefonicznie</strong>, <strong>mailowo</strong>, lub wypełniając
+						poniższy <strong>formularz</strong>. Gdy otrzymamy informację o wypełnionym i wysłanym formularzu,
+						przygotujemy dla Ciebie odpowiednią ofertę wraz ze wstępną wyceną.
 					</p>
 				</div>
 				<div className={styles.main}>

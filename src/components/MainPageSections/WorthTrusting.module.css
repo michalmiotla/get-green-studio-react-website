@@ -1,10 +1,10 @@
 .worth_trusting {
 	position: relative;
-	padding-block: 10rem;
+	padding-block: 5rem;
 
 	.main {
 		position: relative;
-		padding-bottom: 10rem;
+		padding-bottom: 5rem;
 
 		.title {
 			text-align: center;
@@ -61,8 +61,6 @@
 @media screen and (min-width: 768px) {
 	.worth_trusting {
 		.main {
-			padding-bottom: 15rem;
-
 			.box {
 				position: relative;
 				flex-direction: row;

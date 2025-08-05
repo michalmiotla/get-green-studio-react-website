@@ -1,6 +1,6 @@
 import { Container } from '../Container/Container'
 import { Button } from '../Button/Button'
-import { Wave } from '../Wave/Wave'
+
 import styles from './FixedBackground.module.css'
 
 export function FixedBackground({ image }) {

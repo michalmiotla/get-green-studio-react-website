@@ -7,7 +7,7 @@ export function Contact() {
 	return (
 		<div>
 			<Form />
-			<Map />
+			{/* <Map /> */}
 			<FixedBackground image={ContactBackground} />
 		</div>
 	)

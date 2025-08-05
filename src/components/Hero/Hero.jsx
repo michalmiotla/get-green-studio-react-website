@@ -20,7 +20,9 @@ export function Hero() {
 				<div className={styles.gradient}></div>
 				<Container>
 					<div className={styles.main}>
-						<h1>Twój wymarzony ogród czeka na Ciebie!</h1>
+						<h1>
+							Twój wymarzony ogród <br /> <span>czeka na Ciebie!</span>
+						</h1>
 						<hr className={styles.line_one} />
 						<h2>
 							Get Green Studio specjalizuje się w kreatywnym kształtowaniu przestrzeni zielonych, gdzie pasja do

@@ -1,5 +1,4 @@
 import { Container } from '../Container/Container'
-import { Wave } from '../Wave/Wave'
 import styles from './HowToCare.module.css'
 import ImgOne from '../../assets/design/People taking care of plants-bro.svg'
 import ImgTwo from '../../assets/design/Spring flower-bro.svg'
@@ -50,7 +49,6 @@ export function HowToCare() {
 					<hr className={styles.horizontal_line} />
 				</div>
 			</Container>
-			<Wave color='mainColor' />
 		</div>
 	)
 }

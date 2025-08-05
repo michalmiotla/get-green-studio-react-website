@@ -2,7 +2,6 @@ import { Container } from '../Container/Container'
 import styles from './OfferTable.module.css'
 import OkSvg from '../../assets/icons/ok.svg'
 import XSvg from '../../assets/icons/close.svg'
-import { Wave } from '../Wave/Wave'
 
 export function OfferTable() {
 	return (
@@ -209,7 +208,6 @@ export function OfferTable() {
 					</ul>
 				</div>
 			</Container>
-			<Wave color='mainColor' />
 		</div>
 	)
 }
