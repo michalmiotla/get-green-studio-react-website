@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router'
 import { Navigation } from '../Navigation/Navigation'
-import { MainPage } from '../../views/MainPage/MainPage'
 import { Footer } from '../Footer/Footer'
 import { HomeButton } from '../HomeButton/HomeButton'
 import { useEffect, useState } from 'react'
 
-export function Layout() {
+function Layout() {
 	const [isHomeButtonShowed, setIsHomeButtonShowed] = useState(false)
 	const [windowScroll, setWindowScroll] = useState(0)
 
@@ -37,3 +36,5 @@ export function Layout() {
 		</>
 	)
 }
+
+export default Layout
