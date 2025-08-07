@@ -16,6 +16,11 @@ export function Navigation() {
 		setIsMobileNavShown(!isMobileNavShown)
 	}
 
+	function backToTop() {
+		setIsMobileNavShown(false)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+
 	useEffect(() => {
 		const handleResize = () => {
 			setElementWidth(window.innerWidth)
@@ -34,7 +39,7 @@ export function Navigation() {
 			<Container>
 				<div className={styles.navigation}>
 					<div className={styles.logo}>
-						<NavLink onClick={() => setIsMobileNavShown(false)} to='/'>
+						<NavLink onClick={backToTop} to='/'>
 							<img src={Logo} alt='get green studio logo' />
 						</NavLink>
 					</div>

@@ -10,12 +10,14 @@ import { Cards } from './views/Cards/Cards'
 import { Contact } from './views/Contact/Contact'
 import { Portfolio } from './views/Portfolio/Portfolio'
 import { Loading } from './components/Loading/Loading.jsx'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx'
 
 const Layout = lazy(() => import('./components/Layout/Layout.jsx'))
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
 		<BrowserRouter>
+			<ScrollToTop />
 			<Suspense fallback={<Loading />}>
 				<Routes>
 					<Route path='' element={<Layout />}>
