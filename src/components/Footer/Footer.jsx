@@ -11,9 +11,10 @@ export function Footer() {
 				<div className={styles.main}>
 					<div className={styles.box_one}>
 						<p>Get Green Studio</p>
-						<p>ul. Kwiatowa 1</p>
-						<p>tel. 123 456 789</p>
-						<p>mail@getgreenstudio.pl</p>
+						<p>Alicja Janiszewska</p>
+						<p>ul. Żeglarska 22</p>
+						<p>21-008 Dąbrowica</p>
+						<p>kontakt@getgreenstudio.pl</p>
 					</div>
 					<div className={styles.img_box}>
 						<img className={styles.leaf_one} src={Leaf} alt='' />
@@ -21,7 +22,8 @@ export function Footer() {
 						<img className={styles.leaf_two} src={Leaf} alt='' />
 					</div>
 					<div className={styles.box_two}>
-						<p>NIP: 1234567890</p>
+						<p>tel. 790 687 421</p>
+						<p>NIP: 7133135352</p>
 						<p>Godziny otwarcia:</p>
 						<p>Pn - Pt 8:00 - 16:00</p>
 						<p>Sobota, niedziela - nieczynne</p>

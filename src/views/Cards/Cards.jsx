@@ -8,7 +8,14 @@ export function Cards() {
 		<div>
 			<ServiceDescription />
 			<ServiceDetails />
-			<FixedBackground image={CardsBackground} />
+			<FixedBackground
+				firstDesc='Masz pytania?'
+				firstLink='/kontakt'
+				firstInfo='Skontaktuj się z nami'
+				secondLink='/oferta'
+				secondInfo='Sprawdź pełną ofertę'
+				image={CardsBackground}
+			/>
 		</div>
 	)
 }

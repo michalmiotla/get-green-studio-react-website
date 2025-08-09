@@ -29,7 +29,11 @@ export function Hero() {
 							przyrody łączy się z profesjonalizmem i indywidualnym podejściem do każdego projektu.
 						</h2>
 						<hr className={styles.line_two} />
-						<Button to='/oferta'>Poznaj naszą ofertę</Button>
+						<div>
+							<Button className={styles.button} to='/oferta'>
+								Poznaj naszą ofertę
+							</Button>
+						</div>
 					</div>
 				</Container>
 				<PageDownButton scrollDown={scrollDown} />

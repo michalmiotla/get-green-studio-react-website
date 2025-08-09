@@ -64,6 +64,10 @@
 			height: 1px;
 			animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 3s both;
 		}
+
+		div {
+			animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 4s both;
+		}
 	}
 }
 

@@ -8,7 +8,14 @@ export function Offer() {
 		<>
 			<CooperationPlan />
 			<OfferTable />
-			<FixedBackground image={OfferBackground} />
+			<FixedBackground
+				image={OfferBackground}
+				firstDesc='Masz pytania?'
+				firstLink='/kontakt'
+				firstInfo='Skontaktuj się z nami'
+				secondLink='/pakiety'
+				secondInfo='Sprawdź dostępne pakiety'
+			/>
 		</>
 	)
 }
