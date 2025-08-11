@@ -1,8 +1,20 @@
 import { Container } from '../Container/Container'
 import styles from './ServiceDescription.module.css'
 import Toggle from '../../assets/design/Toggle-bro.svg'
+import { LoadingPhoto } from '../Loading/LoadingPhoto'
+import { useEffect, useState } from 'react'
 
 export function ServiceDescription() {
+	const [isPhotoLoaded, setIsPhotoLoaded] = useState(false)
+
+	useEffect(() => {
+		const img = new Image()
+		img.onload = () => {
+			setIsPhotoLoaded(true)
+		}
+		img.src = Toggle
+	}, [Toggle])
+
 	return (
 		<div className={styles.service_description}>
 			<Container>
@@ -27,7 +39,7 @@ export function ServiceDescription() {
 					</div>
 					<hr className={styles.vertical_line_one} />
 					<div className={styles.img_box}>
-						<img src={Toggle} alt='' />
+						{isPhotoLoaded ? <img src={Toggle} alt='' /> : <LoadingPhoto />}
 						<p>
 							<strong>Poniżej więcej szczegółów:</strong>
 						</p>

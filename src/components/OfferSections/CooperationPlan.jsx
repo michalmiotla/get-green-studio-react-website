@@ -1,8 +1,20 @@
 import styles from './CooperationPlan.module.css'
 import { Container } from '../Container/Container.jsx'
 import Woman from '../../assets/design/Woman thinking-bro.svg'
+import { useEffect, useState } from 'react'
+import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
 
 export function CooperationPlan() {
+	const [isPhotoLoaded, setIsPhotoLoaded] = useState(false)
+
+	useEffect(() => {
+		const img = new Image()
+		img.onload = () => {
+			setIsPhotoLoaded(true)
+		}
+		img.src = Woman
+	}, [Woman])
+
 	return (
 		<div className={styles.cooperation_plan}>
 			<Container>
@@ -11,7 +23,7 @@ export function CooperationPlan() {
 					<div className={styles.img_box}>
 						<h3 className={styles.title}>Get Green Studio pomoże Ci z projektem ogrodu od A do Z!</h3>
 						<hr className={styles.horizontal_line} />
-						<img src={Woman} alt='' />
+						{isPhotoLoaded ? <img src={Woman} alt='' /> : <LoadingPhoto />}
 					</div>
 					<div className={styles.description_box}>
 						<p>

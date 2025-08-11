@@ -1,6 +1,6 @@
-import styles from './Loading.module.css'
+import styles from './LoadingPhoto.module.css'
 
-export function Loading() {
+export function LoadingPhoto() {
 	return (
 		<div className={styles.main}>
 			<div className={styles.loader}></div>

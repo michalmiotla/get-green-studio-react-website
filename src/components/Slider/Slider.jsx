@@ -1,6 +1,6 @@
 import styles from './Slider.module.css'
 import CLOSE from '../../assets/icons/close.svg'
-
+import { LoadingPhoto } from '../Loading/LoadingPhoto'
 import DOWN from '../../assets/icons/down.svg'
 import { useState } from 'react'
 export function Slider({ gallery, setIsSliderShown, name, location, year }) {
