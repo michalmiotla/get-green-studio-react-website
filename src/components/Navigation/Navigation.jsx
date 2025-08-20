@@ -38,25 +38,85 @@ export function Navigation() {
 		<nav className={styles.nav}>
 			<Container>
 				<div className={styles.navigation}>
-					<div className={styles.logo}>
-						<NavLink onClick={backToTop} to='/'>
-							<img src={Logo} alt='get green studio logo' />
-						</NavLink>
-					</div>
 					{isMobileNavShown === false ? (
-						<div className={styles.menu}>
-							<img onClick={() => toggleNavigation()} className={styles.burger} src={Burger} alt='open' />
-						</div>
+						<>
+							<div className={styles.logo_mobile}>
+								<NavLink onClick={backToTop} to='/'>
+									<img src={Logo} alt='get green studio logo' />
+								</NavLink>
+							</div>
+							<div className={styles.menu}>
+								<img onClick={() => toggleNavigation()} className={styles.burger} src={Burger} alt='open' />
+							</div>
+						</>
 					) : (
-						<div className={styles.menu}>
-							<img onClick={() => toggleNavigation()} className={styles.close} src={Close} alt='close' />
-						</div>
+						<>
+							<div className={styles.logo_mobile}>
+								<NavLink onClick={backToTop} to='/'>
+									<img src={Logo} alt='get green studio logo' />
+								</NavLink>
+							</div>
+							<div className={styles.menu}>
+								<img onClick={() => toggleNavigation()} className={styles.close} src={Close} alt='close' />
+							</div>
+						</>
 					)}
 
-					<div
-						className={`${isMobileNavShown && elementWidth < 768 && styles.navbar_mobile_active} ${
-							!isMobileNavShown && elementWidth < 768 && styles.navbar_mobile
-						} ${!isMobileNavShown && elementWidth >= 768 && styles.navbar}`}>
+					<div className={styles.navbar}>
+						<ul>
+							<li>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/oferta'>
+									oferta
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/pakiety'>
+									pakiety
+								</NavLink>
+							</li>
+							<li>
+								<div className={styles.logo}>
+									<NavLink onClick={backToTop} to='/'>
+										<img src={Logo} alt='get green studio logo' />
+									</NavLink>
+								</div>
+							</li>
+
+							<li>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/portfolio'>
+									portfolio
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
+									onClick={() => setIsMobileNavShown(false)}
+									className={({ isActive }) => (isActive ? `${styles.active}` : `${styles.navlinks}`)}
+									to='/kontakt'>
+									kontakt
+								</NavLink>
+							</li>
+							{/* <li>
+								<div className={styles.icons}>
+									<Link onClick={() => setIsMobileNavShown(false)} to='https://facebook.com'>
+										<img className={styles.icon} src={FBImg} alt='facebook' />
+									</Link>
+									<Link onClick={() => setIsMobileNavShown(false)} to='https://instagram.com'>
+										<img className={styles.icon} src={IGImg} alt='instagram' />
+									</Link>
+								</div>
+							</li> */}
+						</ul>
+					</div>
+					<div className={`${isMobileNavShown ? styles.navbar_mobile_active : styles.navbar_mobile}`}>
 						<ul>
 							<li>
 								<NavLink
@@ -90,7 +150,7 @@ export function Navigation() {
 									kontakt
 								</NavLink>
 							</li>
-							<li>
+							{/* <li>
 								<div className={styles.icons}>
 									<Link onClick={() => setIsMobileNavShown(false)} to='https://facebook.com'>
 										<img className={styles.icon} src={FBImg} alt='facebook' />
@@ -99,7 +159,7 @@ export function Navigation() {
 										<img className={styles.icon} src={IGImg} alt='instagram' />
 									</Link>
 								</div>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 				</div>
@@ -107,3 +167,7 @@ export function Navigation() {
 		</nav>
 	)
 }
+
+// className={`${isMobileNavShown && elementWidth < 768 && styles.navbar_mobile_active}  ${
+// 							styles.navbar_mobile
+// 						}`}
