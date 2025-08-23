@@ -1,7 +1,7 @@
 import { Button } from '../Button/Button'
 import { Container } from '../Container/Container'
 import styles from './WorthTrusting.module.css'
-import ImgFive from '../../assets/design/Friendship-bro.svg'
+import ImgFive from '../../assets/photos/WPR5-min.jpg'
 
 export function WorthTrusting() {
 	return (
@@ -13,20 +13,21 @@ export function WorthTrusting() {
 					<div className={styles.box}>
 						<div className={styles.description_box}>
 							<p>
-								<strong>Green Get Studio</strong> tworzą dwie przyjaciółki - Alicja oraz Iza. Ukończyłyśmy studia
-								magisterskie z Architektury Krajobrazu i postanowiłyśmy postawić kolejny krok na naszej drodze
-								zawodowej, tworząc ten projekt. Uzyskana wiesza opanowana na studiach wraz z{' '}
-								<strong>doświadczeniem</strong>, które zdołałyśmy już zebrać, wpółpracując z klientami oraz innymi
-								firmami z branży są doskonałą bazą do dalszego wspólnego działania. <strong>Gwarantujemy</strong> pełne
-								zaangażowanie w każdy projekt, wdrażanie przemyślanych rozwiązań bazujących na kreatywności i
-								innowacyjności, dbałość o szczegóły i detale, stały kontakt i doradztwo w dalszych etapach oraz{' '}
-								<strong>pozytywną energię!</strong>
+								Get Green to zespół pasjonatów natury. Aby dotrzeć do szerszego grona odbiorców, podjęliśmy kolejny krok
+								na naszej drodze zawodowej, tworząc ten projekt. Wiedzę zdobytą na studiach łączymy z wieloletnim,
+								praktycznym doświadczeniem zbieranym poprzez współpracę z klientami oraz partnerami z branży. To solidna
+								baza do efektywnej, długofalowej współpracy. Gwarantujemy pełne zaangażowanie w każdy projekt,
+								przemyślane, kreatywne i innowacyjne rozwiązania, dbałość o detale, stały kontakt i doradztwo na
+								kolejnych etapach oraz pozytywną energię wspierającą realizację celów. Zapraszamy do kontaktu, aby
+								omówić, w jaki sposób możemy wesprzeć Państwa w przemianie swojego terenu.
 							</p>
 							<Button to='/kontakt'>Skontaktuj się z nami</Button>
 						</div>
 						<hr className={styles.vertical_line} />
 						<div className={styles.img_box}>
-							<img src={ImgFive} alt='' />
+							<div className={styles.div}>
+								<img src={ImgFive} alt='' />
+							</div>
 						</div>
 					</div>
 					<hr className={styles.horizontal_line} />

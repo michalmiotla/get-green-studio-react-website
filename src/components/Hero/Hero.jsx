@@ -25,7 +25,7 @@ export function Hero() {
 						</h1>
 						<hr className={styles.line_one} />
 						<h2>
-							Get Green Studio specjalizuje się w kreatywnym kształtowaniu przestrzeni zielonych, gdzie pasja do
+							Get Green specjalizuje się w kreatywnym kształtowaniu przestrzeni zielonych, gdzie pasja do
 							przyrody łączy się z profesjonalizmem i indywidualnym podejściem do każdego projektu.
 						</h2>
 						<hr className={styles.line_two} />

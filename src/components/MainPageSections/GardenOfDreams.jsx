@@ -1,8 +1,8 @@
 import styles from './GardenOfDreams.module.css'
 import { Container } from '../Container/Container'
 import { Button } from '../Button/Button'
-import ImgThree from '../../assets/design/Seeding-bro.svg'
-import ImgFour from '../../assets/design/upcycle-bro.svg'
+import ImgThree from '../../assets/photos/WW9.png'
+import ImgFour from '../../assets/photos/WW11.png'
 
 export function GardenOfDreams() {
 	return (
@@ -17,14 +17,18 @@ export function GardenOfDreams() {
 					<hr className={styles.horizontal_line} />
 					<div className={styles.box}>
 						<div className={styles.box_one}>
-							<img src={ImgThree} alt='' />
-							<Button to='/pakiety'>Sprawdź dostępne pakiety</Button>
+							<div className={styles.div}>
+								<img src={ImgThree} alt='' />
+							</div>
+							<Button to='/portfolio'>Zobacz nasze projekty</Button>
 						</div>
 						<hr className={styles.horizontal_line} />
 						<hr className={styles.vertical_line} />
 						<div className={styles.box_two}>
-							<img src={ImgFour} alt='' />
-							<Button to='/portfolio'>Zobacz nasze realizacje</Button>
+							<div className={styles.div}>
+								<img src={ImgFour} alt='' />
+							</div>
+							<Button to='/pakiety'>Sprawdź dostępne pakiety</Button>
 						</div>
 					</div>
 					<hr className={styles.horizontal_line} />

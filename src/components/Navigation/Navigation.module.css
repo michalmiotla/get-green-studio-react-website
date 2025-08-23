@@ -69,15 +69,6 @@
 						border-bottom: 1px solid white;
 					}
 				}
-
-				.icons {
-					display: flex;
-					.icon {
-						width: clamp(2.8rem, 2.871vw + 1.795rem, 4rem);
-						aspect-ratio: 1;
-						margin: 0 1rem;
-					}
-				}
 			}
 		}
 
@@ -137,15 +128,6 @@
 
 						.active {
 							border-bottom: 1px solid white;
-						}
-					}
-
-					.icons {
-						display: flex;
-						.icon {
-							width: 2.5rem;
-							aspect-ratio: 1;
-							margin: 0 1rem;
 						}
 					}
 				}

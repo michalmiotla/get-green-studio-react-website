@@ -1,6 +1,9 @@
 .how_to_care {
 	padding-block: 5rem;
 	position: relative;
+	background-image: url(../../assets/design/bg.png);
+	background-size: cover;
+	background-attachment: fixed;
 
 	.main {
 		position: relative;
@@ -35,18 +38,50 @@
 				justify-content: center;
 				align-items: center;
 				border-radius: 2rem;
-				background-color: var(--box-low-opacity);
+				background-color: var(--background-main-color);
+				padding: 1rem;
+				margin: 1rem;
+
+				.img_box {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
 
 				.img_box,
 				.text_boxes {
 					position: relative;
-					padding-block: 1rem;
 					width: 100%;
+					height: 100%;
 					text-align: center;
+					z-index: 1;
 
-					img {
-						height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
-						animation: move 5s infinite ease-in-out;
+					.div {
+						position: relative;
+						width: 90%;
+						height: 100%;
+						border-radius: 2rem;
+						overflow: hidden;
+
+						img {
+							width: 100%;
+							height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
+							object-fit: cover;
+							padding: 2px;
+							border-radius: 2rem;
+						}
+					}
+
+					.div::before {
+						content: '';
+						display: block;
+						background: linear-gradient(90deg, white 0%, white 100%);
+						width: 100%;
+						height: 100%;
+						border-radius: 5rem;
+						position: absolute;
+						animation: rotate 30s linear infinite;
+						z-index: -1;
 					}
 
 					p {
@@ -75,6 +110,7 @@
 @media screen and (min-width: 768px) {
 	.how_to_care {
 		.main {
+			position: relative;
 			.title {
 				margin-bottom: 2rem;
 			}
@@ -86,17 +122,35 @@
 			}
 
 			.boxes {
+				position: relative;
+				gap: 2rem;
+
 				.box_one,
 				.box_two {
+					position: relative;
 					flex-direction: row;
+					padding: 1rem;
+					gap: 2rem;
 
 					.img_box,
 					.text_boxes {
+						height: 100%;
 						width: 50%;
 
-						img {
-							height: clamp(20rem, 41.494vw - 11.867rem, 40rem);
+						.div {
+							width: 100%;
+
+							img {
+								width: 100%;
+								height: clamp(20rem, 41.494vw - 11.867rem, 40rem);
+							}
 						}
+					}
+
+					.text_boxes {
+						position: relative;
+						height: auto;
+						padding: 2rem;
 					}
 				}
 			}
@@ -104,14 +158,12 @@
 	}
 }
 
-@keyframes move {
-	0% {
-		transform: scale(0.95);
+@keyframes rotate {
+	from {
+		transform: rotate(0);
 	}
-	50% {
-		transform: scale(1.05);
-	}
-	100% {
-		transform: scale(0.95);
+
+	to {
+		transform: rotate(360deg);
 	}
 }
