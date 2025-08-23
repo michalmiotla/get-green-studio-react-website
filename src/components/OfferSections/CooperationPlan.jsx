@@ -1,6 +1,6 @@
 import styles from './CooperationPlan.module.css'
 import { Container } from '../Container/Container.jsx'
-import Woman from '../../assets/design/Woman thinking-bro.svg'
+import IMG_OFFER1 from '../../assets/photos/W1Z1-min.png'
 import { useEffect, useState } from 'react'
 import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
 
@@ -12,8 +12,8 @@ export function CooperationPlan() {
 		img.onload = () => {
 			setIsPhotoLoaded(true)
 		}
-		img.src = Woman
-	}, [Woman])
+		img.src = IMG_OFFER1
+	}, [IMG_OFFER1])
 
 	return (
 		<div className={styles.cooperation_plan}>
@@ -21,26 +21,28 @@ export function CooperationPlan() {
 				<hr className={styles.horizontal_line} />
 				<div className={styles.main}>
 					<div className={styles.img_box}>
-						<h3 className={styles.title}>Get Green Studio pomoże Ci z projektem ogrodu od A do Z!</h3>
+						<h3 className={styles.title}>Get Green pomoże Ci z projektem ogrodu od A do Z!</h3>
 						<hr className={styles.horizontal_line} />
-						{isPhotoLoaded ? <img src={Woman} alt='' /> : <LoadingPhoto />}
+						<div className={styles.div}>{isPhotoLoaded ? <img src={IMG_OFFER1} alt='' /> : <LoadingPhoto />}</div>
 					</div>
 					<div className={styles.description_box}>
 						<p>
-							Współpraca z Get Green Studio zaczyna się od <strong>konsultacji</strong>, nakreślenia oczekiwań i
-							stworzenia kolorowej koncepcji zagospodarowania całego projektowanego otoczenia. Koncepcje pozwalają
-							zobaczyć, jakie funkcje będzie posiadał ogród w danym fragmencie, co daje Państwu <strong>pewność</strong>{' '}
-							co do wyboru odpowiednich rozwiązań do dalszej pracy.
+							W Get Green proces współpracy zaczyna się od wnikliwej konsultacji, podczas której precyzyjnie osadzone są
+							Państwa oczekiwania oraz wytyczone cele inwestycji. Na podstawie rozmowy opracowujemy spójną, kolorową
+							koncepcję zagospodarowania całego projektowanego otoczenia, ukazując funkcje poszczególnych fragmentów
+							ogrodu i dostarczając przekonujących, faktycznych podstaw do podjęcia decyzji dotyczących dalszych
+							rozwiązań
 						</p>
 						<p>
-							Następnie, na podstawie uzgodnionych informacji i wybranej koncepcji powstają{' '}
-							<strong>wizualizacje 3D</strong> przyszłego ogrodu, które stanowią z poprzednimi informacjami{' '}
-							<strong>kompleksowy plan</strong> i podstawę do dalszej pracy z innymi elementami projektu przestrzeni.
+							Kolejnym krokiem są wizualizacje 3D przyszłego ogrodu, wykonywane w oparciu o uzgodnione informacje i
+							wybraną koncepcję. Realistyczne obrazy stanowią kompleksowy plan, łączący założenia koncepcyjne z
+							praktycznymi wytycznymi i stanowią klarowną bazę dla prac z innymi elementami projektu przestrzeni.
 						</p>
 						<p>
-							Dodatkowo, biuro oferuje opracowanie <strong>projektów technicznych</strong>, które zawierają informacje
-							na temat zastosowanych materiałów i ich ilości, a także układu i wymiarowania w wybranych przez klienta
-							projektów.
+							Dodatkowo oferujemy opracowanie projektów technicznych, które zawierają szczegółowe informacje na temat
+							zastosowanych materiałów i ich ilości, a także precyzyjny układ i wymiarowanie wybranych rozwiązań. Dzięki
+							temu dokumentacja jest przejrzysta, realizacja projektu przebiega płynnie, a koszty są lepiej
+							kontrolowane.
 						</p>
 						<p>
 							{' '}
