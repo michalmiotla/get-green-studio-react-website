@@ -1,6 +1,6 @@
 .footer {
 	position: relative;
-	background-image: url(../../assets//photos/WLBN1.jpg);
+	background-image: url(../../assets//photos/footer.jpg);
 	background-position: center;
 	background-size: cover;
 	padding-block: 2rem;
@@ -20,6 +20,7 @@
 		border-radius: 2rem;
 		padding: 1rem;
 		gap: 1rem;
+		margin: 1rem;
 
 		.info {
 			display: flex;

@@ -3,9 +3,9 @@ import { Card } from '../Card/Card'
 import CardDetails from '../CardDetails/CardDetails.jsx'
 import styles from './ServiceDetails.module.css'
 import { useRef, useState } from 'react'
-import CARD_ONE from '../../assets/photos/WPR5-min.jpg'
-import CARD_TWO from '../../assets/photos/WPR9-min.jpg'
-import CARD_THREE from '../../assets/photos/WW8-min.png'
+import CARD_ONE from '../../assets/photos/cardOne.jpg'
+import CARD_TWO from '../../assets/photos/cardTwo.jpg'
+import CARD_THREE from '../../assets/photos/cardThree.jpg'
 
 export function ServiceDetails() {
 	const [areDetailsShown, setAreDetailsShown] = useState(false)

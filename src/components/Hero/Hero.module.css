@@ -8,7 +8,7 @@
 	height: 100vh;
 	min-height: 800px;
 	max-height: 1280px;
-	background-image: url(../../assets/photos/hero.png);
+	background-image: url(../../assets/photos/hero.webp);
 	background-size: cover;
 
 	/* .gradient {
@@ -102,8 +102,6 @@
 
 @media screen and (min-width: 768px) {
 	.hero {
-		background-image: url(../../assets/photos/hero.png);
-
 		.main {
 			h1 {
 				padding-inline: 10rem;

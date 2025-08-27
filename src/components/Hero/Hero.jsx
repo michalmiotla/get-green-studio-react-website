@@ -25,8 +25,7 @@ export function Hero() {
 						</h1>
 						<hr className={styles.line_one} />
 						<h2>
-							Get Green specjalizuje się w kreatywnym kształtowaniu przestrzeni zielonych, gdzie pasja do
-							przyrody łączy się z profesjonalizmem i indywidualnym podejściem do każdego projektu.
+							Get Green to zespół specjalizujący się w projektowaniu terenów zielonych oraz ich elementów, który łączy pasję do przyrody z profesjonalizmem i indywidualnym podejściem, zapewniając unikalne rozwiązania dopasowane do potrzeb klienta.
 						</h2>
 						<hr className={styles.line_two} />
 						<div>

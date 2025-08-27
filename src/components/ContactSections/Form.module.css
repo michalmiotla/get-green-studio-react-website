@@ -1,5 +1,8 @@
 .form {
-	padding-top: 15rem;
+	padding-top: 20rem;
+	background-image: url(../../assets/design/bg.png);
+	background-size: cover;
+	background-attachment: fixed;
 	padding-bottom: 5rem;
 
 	.title_box {
@@ -80,11 +83,34 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					z-index: 1;
 
-					img {
+					.div {
+						position: relative;
+						width: 90%;
 						height: 100%;
+						border-radius: 2rem;
+						overflow: hidden;
+
+						img {
+							width: 100%;
+							height: clamp(18rem, 52.632vw - 0.421rem, 40rem);
+							object-fit: cover;
+							padding: 2px;
+							border-radius: 2rem;
+						}
+					}
+
+					.div::before {
+						content: '';
+						display: block;
+						background: linear-gradient(90deg, white 0%, white 100%);
 						width: 100%;
-						max-width: 50rem;
+						height: 100%;
+						border-radius: 5rem;
+						position: absolute;
+						animation: rotate 30s linear infinite;
+						z-index: -1;
 					}
 				}
 
@@ -232,6 +258,8 @@
 
 @media screen and (min-width: 768px) {
 	.form {
+		padding-top: 30rem;
+
 		.main {
 			form {
 				input[type='radio'] {
@@ -298,5 +326,15 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
 	}
 }

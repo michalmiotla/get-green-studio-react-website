@@ -1,7 +1,7 @@
 import { FixedBackground } from '../../components/FixedBackground/FixedBackground'
 import { CooperationPlan } from '../../components/OfferSections/CooperationPlan'
 import { OfferTable } from '../../components/OfferSections/OfferTable'
-import OfferBackground from '../../assets/photos/WW9.png'
+import OfferBackground from '../../assets/photos/transitionOffer.jpg'
 
 export function Offer() {
 	return (

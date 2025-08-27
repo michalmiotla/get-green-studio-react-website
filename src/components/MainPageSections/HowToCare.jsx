@@ -1,9 +1,30 @@
 import { Container } from '../Container/Container'
 import styles from './HowToCare.module.css'
-import ImgOne from '../../assets/photos/WLS10.jpg'
-import ImgTwo from '../../assets/photos/WW8.png'
+import HowToCare1 from '../../assets/photos/HowToCare1.jpg'
+import HowToCare2 from '../../assets/photos/HowToCare2.jpg'
+import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
+import { useEffect, useState } from 'react'
 
 export function HowToCare() {
+	const [isFirstPhotoLoaded, setIsFirstPhotoLoaded] = useState(false)
+	const [isSecondPhotoLoaded, setIsSecondPhotoLoaded] = useState(false)
+
+	useEffect(() => {
+		const img = new Image()
+		img.onload = () => {
+			setIsFirstPhotoLoaded(true)
+		}
+		img.src = HowToCare1
+	}, [HowToCare1])
+
+	useEffect(() => {
+		const img = new Image()
+		img.onload = () => {
+			setIsSecondPhotoLoaded(true)
+		}
+		img.src = HowToCare2
+	}, [HowToCare2])
+
 	return (
 		<div className={styles.how_to_care}>
 			<Container>
@@ -13,11 +34,15 @@ export function HowToCare() {
 					<div className={styles.boxes}>
 						<div className={styles.box_one}>
 							<div className={styles.img_box}>
-								<div className={styles.div}>
-									<img src={ImgOne} alt='' />
-								</div>
+								{isFirstPhotoLoaded ? (
+									<div className={styles.div}>
+										<img src={HowToCare1} alt='' />
+									</div>
+								) : (
+									<LoadingPhoto />
+								)}
 							</div>
-							{/* <hr className={styles.vertical_line} /> */}
+
 							<div className={styles.text_boxes}>
 								<p>
 									Ogrody odgrywają ważną rolę w życiu człowieka, oferując przestrzeń do relaksu oraz kontaktu z naturą.
@@ -40,9 +65,13 @@ export function HowToCare() {
 							</div>
 							{/* <hr className={styles.vertical_line} /> */}
 							<div className={styles.img_box}>
-								<div className={styles.div}>
-									<img src={ImgTwo} alt='' />
-								</div>
+								{isSecondPhotoLoaded ? (
+									<div className={styles.div}>
+										<img src={HowToCare2} alt='' />
+									</div>
+								) : (
+									<LoadingPhoto />
+								)}
 							</div>
 						</div>
 					</div>

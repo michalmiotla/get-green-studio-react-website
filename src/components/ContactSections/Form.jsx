@@ -1,6 +1,6 @@
 import { Container } from '../Container/Container'
 import styles from './Form.module.css'
-import MENTION from '../../assets/design/Mention-bro 1.png'
+import contact from '../../assets/photos/contact.jpg'
 import { useEffect, useState } from 'react'
 import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
 export function Form() {
@@ -11,8 +11,8 @@ export function Form() {
 		img.onload = () => {
 			setIsPhotoLoaded(true)
 		}
-		img.src = MENTION
-	}, [MENTION])
+		img.src = contact
+	}, [contact])
 
 	return (
 		<div className={styles.form}>
@@ -29,7 +29,15 @@ export function Form() {
 				<div className={styles.main}>
 					<form autoComplete='off' onSubmit={() => console.log('ok')}>
 						<div className={styles.basic_info}>
-							<div className={styles.image}>{isPhotoLoaded ? <img src={MENTION} alt='' /> : <LoadingPhoto />}</div>
+							<div className={styles.image}>
+								{isPhotoLoaded ? (
+									<div className={styles.div}>
+										<img src={contact} alt='' />
+									</div>
+								) : (
+									<LoadingPhoto />
+								)}
+							</div>
 							<hr className={styles.horizontal_line_two} />
 							<hr className={styles.vertical_line} />
 							<div className={styles.basic_box}>

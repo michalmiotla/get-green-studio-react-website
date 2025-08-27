@@ -1,6 +1,6 @@
 import styles from './CooperationPlan.module.css'
 import { Container } from '../Container/Container.jsx'
-import IMG_OFFER1 from '../../assets/photos/W1Z1-min.png'
+import offer1 from '../../assets/photos/offer1.jpg'
 import { useEffect, useState } from 'react'
 import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
 
@@ -12,8 +12,8 @@ export function CooperationPlan() {
 		img.onload = () => {
 			setIsPhotoLoaded(true)
 		}
-		img.src = IMG_OFFER1
-	}, [IMG_OFFER1])
+		img.src = offer1
+	}, [offer1])
 
 	return (
 		<div className={styles.cooperation_plan}>
@@ -23,7 +23,13 @@ export function CooperationPlan() {
 					<div className={styles.img_box}>
 						<h3 className={styles.title}>Get Green pomoże Ci z projektem ogrodu od A do Z!</h3>
 						<hr className={styles.horizontal_line} />
-						<div className={styles.div}>{isPhotoLoaded ? <img src={IMG_OFFER1} alt='' /> : <LoadingPhoto />}</div>
+						{isPhotoLoaded ? (
+							<div className={styles.div}>
+								<img src={offer1} alt='' />
+							</div>
+						) : (
+							<LoadingPhoto />
+						)}
 					</div>
 					<div className={styles.description_box}>
 						<p>

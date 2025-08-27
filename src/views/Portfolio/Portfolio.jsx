@@ -1,5 +1,5 @@
 import { FixedBackground } from '../../components/FixedBackground/FixedBackground'
-import PortfolioBackground from '../../assets/photos/WW11.png'
+import PortfolioBackground from '../../assets/photos/portfolioTransition.jpg'
 import { ChosenProjects } from '../../components/PortfolioSections/ChosenProjects'
 
 export function Portfolio() {

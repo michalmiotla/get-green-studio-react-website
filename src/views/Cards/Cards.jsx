@@ -1,5 +1,5 @@
 import { FixedBackground } from '../../components/FixedBackground/FixedBackground'
-import CardsBackground from '../../assets/photos/WLS10.jpg'
+import CardsBackground from '../../assets/photos/cardsBackground.jpg'
 import { ServiceDescription } from '../../components/CardsSections/ServiceDescription'
 import { ServiceDetails } from '../../components/CardsSections/ServiceDetails'
 
