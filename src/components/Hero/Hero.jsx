@@ -2,18 +2,9 @@ import { Button } from '../Button/Button'
 import styles from './Hero.module.css'
 import { Container } from '../Container/Container'
 import { PageDownButton } from '../PageDownButton/PageDownButton'
+import { forwardRef } from 'react'
 
-export function Hero() {
-	function scrollDown() {
-		const windowHeight = window.innerHeight
-		const windowScrolled = window.scrollY
-
-		window.scrollTo({
-			top: windowScrolled + windowHeight,
-			behavior: 'smooth',
-		})
-	}
-
+export const Hero = forwardRef(function Hero(props, ref) {
 	return (
 		<>
 			<div className={styles.hero}>
@@ -25,7 +16,9 @@ export function Hero() {
 						</h1>
 						<hr className={styles.line_one} />
 						<h2>
-							Get Green to zespół specjalizujący się w projektowaniu terenów zielonych oraz ich elementów, który łączy pasję do przyrody z profesjonalizmem i indywidualnym podejściem, zapewniając unikalne rozwiązania dopasowane do potrzeb klienta.
+							Get Green to zespół specjalizujący się w projektowaniu terenów zielonych oraz ich elementów, który łączy
+							pasję do przyrody z profesjonalizmem i indywidualnym podejściem, zapewniając unikalne rozwiązania
+							dopasowane do potrzeb klienta.
 						</h2>
 						<hr className={styles.line_two} />
 						<div>
@@ -35,8 +28,8 @@ export function Hero() {
 						</div>
 					</div>
 				</Container>
-				<PageDownButton scrollDown={scrollDown} />
+				<PageDownButton ref={ref} />
 			</div>
 		</>
 	)
-}
+})

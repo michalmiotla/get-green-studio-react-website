@@ -2,8 +2,22 @@ import { Button } from '../Button/Button'
 import { Container } from '../Container/Container'
 import styles from './WorthTrusting.module.css'
 import slide1 from '../../assets/photos/slide1.jpg'
+import slide2 from '../../assets/photos/slide2.jpg'
+import slide3 from '../../assets/photos/slide3.jpg'
+import { useEffect, useState } from 'react'
+
+const slides = [slide1, slide2, slide3]
 
 export function WorthTrusting() {
+	const [imageIndex, setImageIndex] = useState(0)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setImageIndex(prev => (prev === slides.length - 1 ? 0 : prev + 1))
+		}, 5000)
+		return () => clearInterval(interval)
+	}, [])
+
 	return (
 		<div className={styles.worth_trusting}>
 			<Container>
@@ -32,7 +46,9 @@ export function WorthTrusting() {
 						<hr className={styles.vertical_line} />
 						<div className={styles.img_box}>
 							<div className={styles.div}>
-								<img src={slide1} alt='' />
+								{slides.map(slide => (
+									<img style={{ translate: `${-100 * imageIndex}%` }} key={slide} src={slide} alt='' />
+								))}
 							</div>
 						</div>
 					</div>

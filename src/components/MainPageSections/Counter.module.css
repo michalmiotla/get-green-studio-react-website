@@ -1,0 +1,37 @@
+.counter {
+	padding-block: 5rem;
+	position: relative;
+	background-color: var(--background-main-color);
+
+	.main {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        gap: 2rem;
+
+		.title,
+		.number {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
+		}
+
+        .number {
+            display: block;
+            padding: 1rem;
+        }
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.counter {
+		.main {
+			flex-direction: row;
+			justify-content: space-between;
+            flex-wrap: wrap;
+		}
+	}
+}

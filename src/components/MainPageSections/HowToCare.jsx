@@ -3,9 +3,9 @@ import styles from './HowToCare.module.css'
 import HowToCare1 from '../../assets/photos/HowToCare1.jpg'
 import HowToCare2 from '../../assets/photos/HowToCare2.jpg'
 import { LoadingPhoto } from '../Loading/LoadingPhoto.jsx'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, forwardRef } from 'react'
 
-export function HowToCare() {
+export const HowToCare = forwardRef(function HowToCare(props, ref) {
 	const [isFirstPhotoLoaded, setIsFirstPhotoLoaded] = useState(false)
 	const [isSecondPhotoLoaded, setIsSecondPhotoLoaded] = useState(false)
 
@@ -26,7 +26,7 @@ export function HowToCare() {
 	}, [HowToCare2])
 
 	return (
-		<div className={styles.how_to_care}>
+		<div ref={ref} className={styles.how_to_care}>
 			<Container>
 				<div className={styles.main}>
 					<p className={styles.title}>Dlaczego warto zadbać o ogród?</p>
@@ -80,4 +80,4 @@ export function HowToCare() {
 			</Container>
 		</div>
 	)
-}
+})

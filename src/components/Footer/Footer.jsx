@@ -17,7 +17,6 @@ export function Footer() {
 							<p>ul. Towarowa 3</p>
 							<p>20-205 Lublin</p>
 							<p>kontakt@getgreenstudio.pl</p>
-							<p>tel. 790 687 421</p>
 						</div>
 						<div className={styles.icons}>
 							<Link to='https://facebook.com'>
