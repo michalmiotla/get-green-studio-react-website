@@ -1,7 +1,11 @@
 .counter {
 	padding-block: 5rem;
 	position: relative;
-	background-color: var(--background-main-color);
+
+	.horizontal_line {
+		width: 100%;
+		margin: 1rem 0;
+	}
 
 	.main {
 		position: relative;
@@ -9,20 +13,54 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-        gap: 2rem;
+		background-image: url(../../assets/photos/GardenOfDreams2.jpg);
+		background-position: center;
+		background-size: cover;
+		border-radius: 2rem;
+
+		.vertical_line {
+			display: none;
+		}
+
+		.box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 
 		.title,
 		.number {
 			text-align: center;
-			text-transform: uppercase;
 			font-weight: 300;
-			font-size: clamp(1.6rem, 2.222vw + 0.822rem, 3.6rem);
 		}
 
-        .number {
-            display: block;
-            padding: 1rem;
-        }
+		.title {
+			font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+		}
+
+		.number {
+			display: block;
+
+			font-size: clamp(9.6rem, 10.667vw + 5.867rem, 19.2rem);
+		}
+
+		.opinions {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 5rem;
+			padding: 2rem;
+			gap: 2rem;
+
+			.name,
+			.content {
+				text-align: center;
+				font-size: clamp(1.4rem, 1.111vw + 1.011rem, 2.4rem);
+				animation: show 10s infinite;
+			}
+		}
 	}
 }
 
@@ -30,8 +68,42 @@
 	.counter {
 		.main {
 			flex-direction: row;
-			justify-content: space-between;
-            flex-wrap: wrap;
+			height: 35rem;
+
+			.box {
+				width: 25%;
+			}
+
+			.opinions {
+				width: 50%;
+				padding: 1rem;
+				margin-top: 2rem;
+			}
+
+			.vertical_line {
+				display: inline;
+				position: absolute;
+				height: calc(100% - 2rem);
+				width: 1px;
+			}
 		}
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }

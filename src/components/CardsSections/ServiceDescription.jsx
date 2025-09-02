@@ -1,6 +1,7 @@
 import { Container } from '../Container/Container'
 import styles from './ServiceDescription.module.css'
-import serviceDescription from '../../assets/photos/serviceDescription.jpg'
+import serviceDescriptionMobile from '../../assets/photos/serviceDescMobile.png'
+import serviceDescription from '../../assets/photos/serviceDesc.png'
 import { LoadingPhoto } from '../Loading/LoadingPhoto'
 import { useEffect, useState } from 'react'
 
@@ -41,7 +42,7 @@ export function ServiceDescription() {
 					<div className={styles.img_box}>
 						{isPhotoLoaded ? (
 							<div className={styles.div}>
-								<img src={serviceDescription} alt='' />
+								<img src={serviceDescriptionMobile} alt='' />
 							</div>
 						) : (
 							<LoadingPhoto />
